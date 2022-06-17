@@ -33,13 +33,13 @@
     </nav>
   </header>
 
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Presentation msg="Welcome to Your Vue.js App"/>
   <router-view></router-view>
 
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Presentation from "@/components/Presentation";
 let logo = require('../src/assets/logo/logo_small.png');
 let engF = require('../src/assets/nav/enFlag.svg.png');
 let frF = require('../src/assets/nav/Flag_of_France.svg.webp');
@@ -58,16 +58,18 @@ let frF = require('../src/assets/nav/Flag_of_France.svg.webp');
 .row {
   padding: 0!important;
   margin: 0!important;
-}
-.flag-cat {
+
+  .flag-cat {
     height: 30px;
     width: 30px;
-  padding: 0!important;
-  margin: 0!important;
-  img {
-    max-width: 100%;
-    max-height: 100%;
+    padding: 0!important;
+    margin: 0!important;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }
+
 
 </style>
