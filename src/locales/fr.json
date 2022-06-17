@@ -1,3 +1,9 @@
 {
-  "message": "bonjour i18n !!"
+  "message": "bonjour i18n !!",
+  "NAV": {
+    "HOME": "Menu",
+    "PROJECTS": "Projets",
+    "ABOUT": "A Propos",
+    "LANGUAGE": "Switch to English"
+  }
 }
