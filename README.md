@@ -2,23 +2,8 @@
 
 ## Project setup
 ```
-npm install
-```
+Hello, just my personnal website. Do not hesitate to do a PR if you think
+I should do something better etc.
 
-### Compiles and hot-reloads for development
+Have a nice day
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

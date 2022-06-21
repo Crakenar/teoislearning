@@ -1,0 +1,139 @@
+$bg-color : white;
+$color-writing: grey;
+$color-spacing: black;
+$writingspeed : 1s;
+$charactersnumberL1 : 58;
+$total: 8;
+
+.row {
+  text-align: center;
+  max-height: 1080px;
+}
+
+.code-block {
+  border-radius: 10px;
+  background: $bg-color;
+  max-width: 55%!important;
+  height: 100%;
+  margin-left: -25%;
+  color: $color-writing;
+  padding: 8px;
+  line-height: 16px;
+  background: white;
+  border: 1px solid white;
+  box-shadow: 0 1px 0 1px black,
+  inset 0 1px 0 1px black,
+  0 0 0 1px black,
+  inset 0 0 0 1px black;
+  position: relative;
+
+  i {
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    border-top-color: black;
+    margin-top: 23px;
+    animation: bounce 1s ease infinite;
+    bottom: 0;
+    right: 10px;
+    position: absolute;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-3px);}
+    60% {transform: translateY(-5px);}
+  }
+
+  h2 {
+    font-size: clamp(1rem, 3vw + 1px, 4px);
+    position: relative;
+    width: max-content;
+    margin-bottom: 20px;
+  }
+
+  h2::before, h2::after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+  }
+
+
+
+  //For loop to get $total class to have multiple different animation
+  //I did this bc I could not make different animation-delay using the same animation
+  @for $i from 1 through $total {
+    .l#{$i}::before{
+      background:  white;
+      animation: typewriter  $writingspeed steps($charactersnumberL1) forwards;
+      animation-delay: $i * 1s;
+    }
+
+    .l#{$i}::after {
+      width: .125em;
+      background: $color-spacing;
+      animation: typewriter $writingspeed steps($charactersnumberL1) forwards;
+      animation-delay: $i * 1s;
+    }
+  }
+
+
+  @keyframes typewriter {
+    to {
+      left: 100%
+    }
+  }
+
+}
+
+
+
+
+
+
+
+//Image Presentation + Animeation on hover
+
+.flag-cat {
+  height: 300px;
+  width: 300px;
+  padding: 0!important;
+  margin: 0!important;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    transform: rotate(-5deg);
+    animation-direction: normal;
+  }
+  &:hover {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-direction: reverse;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+
+.icon {
+  height: 50px;
+  width: 50px;
+  padding: 0!important;
+  margin: 0!important;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+  }
+}
