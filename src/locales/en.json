@@ -5,5 +5,20 @@
     "PROJECTS": "Projects",
     "ABOUT": "About",
     "LANGUAGE": "Passer en Francais"
+  },
+  "PRESENTATION": {
+    "NAME": "Name",
+    "CODENAME": "Code Name",
+    "OCCUPATION": "Occupation",
+    "OCCUPATION2": "Full-Stack Developer",
+    "MAIL": "E-Mail",
+    "ADDRESS": "Address",
+    "HOBBIES": "Hobbies",
+    "HOBBIES2": "Work out, Gaming, Skiing, Snowboarding",
+    "CHARACTERISTICS": "Characteristics",
+    "CHARACTERISTICS2": "Calm, Attentive, Curious, Franc, Rational ",
+    "FEWWORDS": "In few words",
+    "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
+
   }
 }

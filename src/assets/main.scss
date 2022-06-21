@@ -1,1 +1,13 @@
 @import '~bootstrap';
+
+html > *{
+  //background: #c31432;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to right, #240b36, #c31432);
+
+
+  background: #8360c3;  /* fallback for old browsers */
+  background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  max-width: 1920px;
+}

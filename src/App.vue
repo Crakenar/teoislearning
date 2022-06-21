@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container px-4 px-lg-1">
         <router-link class="navbar-brand" to="/">
           <img :src="logo">
@@ -17,7 +17,7 @@
           </ul>
           <div class="row ">
             <div class="col flag-cat ">
-              <img :src="frF" alt="image of the french flag to choose the language">
+              <img :src="frF" alt="image of the french flag to choose the language french">
             </div>
             <div class="col ">
               <div class=" form-switch">
@@ -25,7 +25,7 @@
               </div>
             </div>
             <div class="col flag-cat ">
-              <img :src="engF" alt="image of the english flag to choose the language">
+              <img :src="engF" alt="image of the english flag to choose the language english">
             </div>
           </div>
         </div>
@@ -40,13 +40,13 @@
 
 <script setup>
 import Presentation from "@/components/Presentation";
-let logo = require('../src/assets/logo/logo_small.png');
-let engF = require('../src/assets/nav/enFlag.svg.png');
-let frF = require('../src/assets/nav/Flag_of_France.svg.webp');
+let logo = require('./assets/img/logo/logo_small.png');
+let engF = require('./assets/img/nav/enFlag.svg.png');
+let frF = require('./assets/img/nav/Flag_of_France.svg.webp');
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .navbar-brand {
   width: 20%;
@@ -70,6 +70,19 @@ let frF = require('../src/assets/nav/Flag_of_France.svg.webp');
     }
   }
 }
+
+header {
+  //background: #c31432;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to right, #240b36, #c31432);
+
+
+  background: #8360c3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+} /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
 </style>
