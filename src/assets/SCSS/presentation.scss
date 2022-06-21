@@ -61,17 +61,10 @@ $total: 8;
 
   }
 
-  //h2::before {
-  //  background:  white;
-  //  animation: typewriter $writingspeed steps($charactersnumberL1) forwards;
-  //}
-  //
-  //h2::after {
-  //  width: .125em;
-  //  background: $color-spacing;
-  //  animation: typewriter $writingspeed steps($charactersnumberL1) forwards;
-  //}
 
+
+  //For loop to get $total class to have multiple different animation
+  //I did this bc I could not make different animation-delay using the same animation
   @for $i from 1 through $total {
     .l#{$i}::before{
       background:  white;
