@@ -20,17 +20,38 @@
     </div>
   </div>
   <div class="row" style="margin-top: 200px">
-    <div class="col">DDDDD           <div class="col icon"> <img :src="URL_ANGULAR_PIC" alt="icon of an angular image"></div>
+    <div class="col text-center">
+      <p style="text-align: left">Level : {{yearExp}}</p>
+      <div class="col dresseur"> <img :src="URL_DRESSEUR_PIC" alt="icon of an angular image"></div>
+      <div class="progress">
+        <div class="progress-bar" :style="stringFinal"></div>
+      </div>
+      <div class="row">
+        <div class="col">Connaissances  {{yearExp}}</div>
+        <div class="col">Apprentissage</div>
+      </div>
     </div>
-    <div class="col">YYYYY</div>
-    <div class="col">FFSDSD</div>
+    <div class="col">
+      <Carousel />
+    </div>
   </div>
-</template>
+  <div class="row" style="text-align: center">
+    <div class="code-block"></div>
+  </div>
 
+</template>
 <script setup>
+import moment from 'moment';
+import Carousel from './Carousel'
+
+let month = moment().format('M');
+let percentageMonthWidth = month / 12 * 100;
+let stringFinal = 'width : ' + percentageMonthWidth + '%';
+let yearExp = moment("2020", "YYYY").fromNow().slice(0,2);
 
 const URL_PROFIL_PIC = require('../assets/img/Presentation/1655844360365.jpeg');
-const URL_ANGULAR_PIC =require('../assets/img/Presentation/icons/angular.svg');
+//const URL_ANGULAR_PIC =require('../assets/img/Presentation/icons/angular.svg');
+const URL_DRESSEUR_PIC = require('../assets/img/Presentation/dresseur.gif');
 </script>
 
 <style scoped lang="scss">
