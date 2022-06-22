@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
       <div class="carousel-inner">
-        <div class="carousel-item" :class="index === 0 ? 'active' : ''" v-for="(icons, index) in listIconFight" :key="index">
+        <div  v-for="(icons, index) in listIconFight" :key="index"
+              class="carousel-item" :class="index === 0 ? 'active' : ''">
           <img  :src="icons" class="w-25">
         </div>
       </div>

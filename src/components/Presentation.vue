@@ -50,7 +50,6 @@ let stringFinal = 'width : ' + percentageMonthWidth + '%';
 let yearExp = moment("2020", "YYYY").fromNow().slice(0,2);
 
 const URL_PROFIL_PIC = require('../assets/img/Presentation/1655844360365.jpeg');
-//const URL_ANGULAR_PIC =require('../assets/img/Presentation/icons/angular.svg');
 const URL_DRESSEUR_PIC = require('../assets/img/Presentation/dresseur.gif');
 </script>
 
