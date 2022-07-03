@@ -20,5 +20,11 @@
     "FEWWORDS": "In few words",
     "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
 
+  },
+  "CAROUSEL": {
+    "SKILLS": {
+      "DATABASE" : "Database",
+      "SOFTSKILL" : "Soft-Skill"
+    }
   }
 }
