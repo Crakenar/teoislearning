@@ -1,3 +1,7 @@
 <template>
-  <h1>Home Page</h1>
+  <Presentation></Presentation>
 </template>
+
+<script setup>
+import Presentation from "@/components/Presentation";
+</script>
