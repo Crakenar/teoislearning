@@ -25,15 +25,15 @@
   </div>
   <div class="row">
     <div v-for="(project, index) in filteredList" :key="index" class="p-lg-2 col-lg-4 content-center">
-      <ProjectCard :project="project" />
+      <ProjectCard :project="project"/>
     </div>
   </div>
 </template>
 
 <script setup>
-import {Projet} from "@/Model/Projet.js";
 import ProjectCard from "@/components/ProjectCard";
 import {computed, ref} from "vue";
+import jsonDate from "@/assets/markdown/Projects/teoislearning.json"
 let search = ref('');
 // let filterByTag = ref(null);
 
@@ -67,64 +67,8 @@ function filter(tag) {
 
 //TODO : Faire en sorte que l'on obtienne une liste de projets via un ensemble de fichier de type .md ou .json a voir
 //TOdo ajouter un 'store' pour i18n value ?
-const projectList = [
-    new Projet(
-        'TeoisLearning',
-        'Simple projet pou ',
-        'Simple project to ',
-        require('../assets/img/logo/logo_small_icon_only_inverted.png'),
-        'https://github.com/Crakenar/teoisleaning',
-        ['Vuejs', 'SCSS'],
-         new Date()
-    ),
-    new Projet(
-        'Angular Tour of Hereos',
-        'Projet initiation a Angular, le but etait de suivre le tutoriel offciel d\'angular et d\'ensuite effectuer' +
-        ' des ameliorations. ',
-        'Simple project to introduce Angular, the goal was to follow the official tutorial of Angular and then improve the application. ',
-        require('../assets/img/Projets/TourOfHeroes.png'),
-        'https://github.com/Crakenar/teoisleaning',
-        ['Angular', 'SCSS'],
-        new Date()
-    ),
-  new Projet(
-      'Yikes',
-      'Simple project to XXX',
-      'Simple project to ',
-      require('../assets/img/Projets/defaultProjectImage.png'),
-      'https://github.com/Crakenar/teoisleaning',
-      ['React', 'SCSS'],
-      new Date()
-  ),
-  new Projet(
-      'GameJam 2020 IUT 2',
-      'Initiation a python lors d\'un event \'GameJam 2020\' durant ma formation au DUT, nous etions une equipe de 2 personne' +
-      ' nous avons utilise la librairie pygame. Ce fut un projet tres interessant car c\'etait la premiere fois que je realisais un jeu de A a Z ',
-      'Python',
-      require('../assets/img/Projets/GameJam/bird_blue.png'),
-      'https://github.com/Crakenar/GamePython',
-      ['Others'],
-      new Date()
-  ),
-  new Projet(
-      'Yikes',
-      'Animation en SVG lors d\'un seminaire en anglais avec une equipe de 4 personnes',
-      'Animation using SVG during a semester using only english with a team of 4 persons',
-      require('../assets/img/Projets/animationsvg.png'),
-      'https://github.com/Crakenar/SVG-Animations',
-      ['Others'],
-      new Date()
-  ),
-  new Projet(
-      'Yikes',
-      'Animation en SVG lors d\'un seminaire en anglais avec une equipe de 4 personnes',
-      'Animation using SVG during a semester using only english with a team of 4 persons',
-      require('../assets/img/Projets/animationsvg.png'),
-      'https://github.com/Crakenar/SVG-Animations',
-      ['Others'],
-      new Date()
-  )
-]
+const projectList = jsonDate;
+
 </script>
 
 <style scoped lang="scss">

@@ -1,24 +1,49 @@
 <template>
   <div class="container">
     <div class="main-timeline">
-      <div class="timeline" v-for="(exp, index) in expList" :key="index">
-        <div class="icon"></div>
+      <div v-for="(exp, index) in expList" :key="index" class="timeline">
         <div class="date-content">
           <div class="date-outer">
             <span class="date">
-              <span class="month">{{exp.duration}}</span>
-              <span class="year">{{exp.year}}</span>
+              <span class="month">{{ exp.duration }}</span>
+              <span class="year">{{ exp.year }}</span>
             </span>
           </div>
         </div>
-        <div class="timeline-content">
-          <h5 class="title">{{exp.name}}</h5>
-          <p class="description" v-if="$i18n.locale === 'fr'">
-            {{exp.descriptionFR}}
+        <a data-bs-toggle="modal" :data-bs-target="'#'+exp.company" class="timeline-content">
+          <h5 class="title">{{ exp.name }}</h5>
+          <p v-if="$i18n.locale === 'fr'" class="description">
+            {{ exp.descriptionFR }}
           </p>
-          <p class="description" v-else>
-            {{exp.descriptionEN}}
+          <p v-else class="description">
+            {{ exp.descriptionEN }}
           </p>
+        </a>
+        <!--MODAL-->
+        <div :id="exp.company" :aria-labelledby="exp.company"
+             aria-hidden="true" class="modal fade" tabindex="-1">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="exampleModalLabel" class="modal-title">{{ exp.name }}</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-9" style="border-right: 2px solid black">
+                    <p v-if="$i18n.locale === 'fr'" class="card-text">{{ exp.descriptionFR }}</p>
+                    <p v-else class="card-text">{{ exp.descriptionEN }}</p>
+                  </div>
+                  <div class="col-lg-3">
+                    <img :src="exp.imageUrl" :alt="'image de ' + exp.company">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -29,33 +54,70 @@
 import {Experience} from "@/Model/Experience";
 
 const expList = [
-    new Experience(
-        'Developpeur',
-        'nul',
-        'mull',
-        '5 months',
-        '2022'
-    ),
+  new Experience(
+      'Developpeur',
+      'nul',
+      'mull',
+      '5 months',
+      '2022',
+      'AM-Creations',
+      '02 February, 2022',
+      require('../assets/img/Experiences/amcreations.png')
+  ),
   new Experience(
       'Analyste Developpeur',
       'nul',
       'mull',
       '4 months',
-      '2021 - 2022'
+      '2021 - 2022',
+      'Axopen',
+      '04 October, 2021',
+      require('../assets/img/Experiences/axopen.png')
   ),
   new Experience(
       'Developpeur Full-Stack',
-      'nul',
+      'Développement du nouvel intranet “Trixnet” : Dotnet Core MVC, Orchard, SQL, SASS, Bootstrap\n' +
+      '\n \nand ' +
+      'o Recueil du besoin des différents services afin d’effectuer une planification précise du projet avec une méthodologie type agile.\n' +
+      '\n' +
+      'o Mise en place de la base de données pour le Headless CMS OrcardCore.\n' +
+      '\n' +
+      'o Mise en place du serveur IIS pour le déploiement.\n' +
+      '\n' +
+      'o Mise en place du git avec un workflow basique pour vérifier certains tests majeurs.\n' +
+      '\n' +
+      'o Dockerisation de la BDD pour travailler en remote.\n' +
+      '\n' +
+      'o Utilisation de .Net Core MVC pour le développement\n' +
+      '\n' +
+      '§ Razor pages\n' +
+      '\n' +
+      '§ Tag Helpers\n' +
+      '\n' +
+      '§ Dependency Injection\n' +
+      '\n' +
+      'o Utilisation d’Entity Framework pour le back-end et LinQ.\n' +
+      '\n' +
+      'o Développement d’une application Organigramme “from scratch” avec un côté administrateur par service.\n' +
+      '\n' +
+      'Developpement et support Application : \n' +
+      'JAVAEE, SQL',
       'mull',
       '1 year',
-      '2020 - 2021'
+      '2020 - 2021',
+      'Trixell',
+      '07 October, 2020',
+       require('../assets/img/Experiences/trixell.png')
   ),
   new Experience(
       'Stage Developpeur',
       'nul',
       'mull',
       '4.5 months',
-      '2020'
+      '2020',
+      'Mobiteach',
+      '14 Avril 2020',
+      require('../assets/img/Experiences/mobiteach.jpg')
   )
 ]
 </script>
@@ -67,96 +129,67 @@ const expList = [
   margin-top: 30px;
 }
 
+img {
+  width: 200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a, a:hover,a:visited,a:focus, a:active  {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  cursor: pointer;
+}
+
 
 .main-timeline {
   margin-top: 5%;
-  position: relative
-}
+  position: relative;
 
-.main-timeline:before {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 100%;
-  background: #c6c6c6;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0
+  &:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: #c6c6c6;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+  }
 }
 
 .main-timeline .timeline {
   margin-bottom: 40px;
-  position: relative
-}
+  position: relative;
 
-.main-timeline .timeline:after {
-  content: "";
-  display: block;
-  clear: both
-}
-
-.main-timeline .icon {
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0
-}
-
-.main-timeline .icon:before,
-.main-timeline .icon:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.33s ease-out 0s
-}
-
-.main-timeline .icon:before {
-  background: #fff;
-  border: 2px solid #232323;
-  left: -3px
-}
-
-.main-timeline .icon:after {
-  border: 2px solid #c6c6c6;
-  left: 3px
-}
-
-.main-timeline .timeline:hover .icon:before {
-  left: 3px
-}
-
-.main-timeline .timeline:hover .icon:after {
-  left: -3px
+  &:after {
+    content: "";
+    display: block;
+    clear: both
+  }
 }
 
 .main-timeline .date-content {
   width: 50%;
   float: left;
   margin-top: 22px;
-  position: relative
-}
+  position: relative;
 
-.main-timeline .date-content:before {
-  content: "";
-  width: 36.5%;
-  height: 2px;
-  background: #c6c6c6;
-  margin: auto 0;
-  position: absolute;
-  top: 0;
-  right: 10px;
-  bottom: 0
+  &::before {
+    content: "";
+    width: 45%;
+    height: 2px;
+    background: #c6c6c6;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    bottom: 0
+  }
 }
 
 .main-timeline .date-outer {
@@ -165,40 +198,35 @@ const expList = [
   font-size: 16px;
   text-align: center;
   margin: auto;
-  z-index: 1
+  z-index: 1;
+
+  &::before, ::after {
+    content: "";
+    width: 250px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 0;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    transition: all 0.33s ease-out 0s
+  }
+
+  &::before {
+    background: #fff;
+    border: 2px solid #232323;
+    left: -6px
+  }
+
+  &::after {
+    border: 2px solid #c6c6c6;
+    left: 6px
+  }
 }
 
-.main-timeline .date-outer:before,
-.main-timeline .date-outer:after {
-  content: "";
-  width: 125px;
-  height: 125px;
-  margin: 0 auto;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.33s ease-out 0s
-}
-
-.main-timeline .date-outer:before {
-  background: #fff;
-  border: 2px solid #232323;
-  left: -6px
-}
-
-.main-timeline .date-outer:after {
-  border: 2px solid #c6c6c6;
+.main-timeline .timeline .date-outer:before {
   left: 6px
-}
-
-.main-timeline .timeline:hover .date-outer:before {
-  left: 6px
-}
-
-.main-timeline .timeline:hover .date-outer:after {
-  left: -6px
 }
 
 .main-timeline .date {
@@ -240,12 +268,13 @@ const expList = [
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {
-  float: right
+  float: right;
+
+  &::before {
+    left: 0px;
+  }
 }
 
-.main-timeline .timeline:nth-child(2n) .date-content:before {
-  left: 10px
-}
 
 .main-timeline .timeline:nth-child(2n) .timeline-content {
   padding: 20px 50px 20px 0;
@@ -254,11 +283,13 @@ const expList = [
 
 @media only screen and (max-width: 991px) {
   .main-timeline .date-content {
-    margin-top: 35px
+    margin-top: 35px;
+
+    &::before {
+      width: 22.5%
+    }
   }
-  .main-timeline .date-content:before {
-    width: 22.5%
-  }
+
   .main-timeline .timeline-content {
     padding: 10px 0 10px 30px
   }
@@ -276,10 +307,11 @@ const expList = [
     left: 7px
   }
   .main-timeline .timeline {
-    margin-bottom: 20px
-  }
-  .main-timeline .timeline:last-child {
-    margin-bottom: 0
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0
+    }
   }
   .main-timeline .icon {
     margin: auto 0
@@ -287,19 +319,20 @@ const expList = [
   .main-timeline .date-content {
     width: 95%;
     float: right;
-    margin-top: 0
-  }
-  .main-timeline .date-content:before {
-    display: none
+    margin-top: 0;
+
+    &::before {
+      display: none
+    }
   }
   .main-timeline .date-outer {
     width: 110px;
-    height: 110px
-  }
-  .main-timeline .date-outer:before,
-  .main-timeline .date-outer:after {
-    width: 110px;
-    height: 110px
+    height: 110px;
+
+    &:before, &:after {
+      width: 250px;
+      height: 110px
+    }
   }
   .main-timeline .date {
     top: 30%

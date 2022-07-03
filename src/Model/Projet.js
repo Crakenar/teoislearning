@@ -1,5 +1,7 @@
 export class Projet {
-    constructor(name, descrptionFR, descriptionEN, imgUrl, githubUrl, technos, date) {
+
+    constructor(id, name, descrptionFR, descriptionEN, imgUrl, githubUrl, technos, date) {
+        this.id = id;
         this.name = name;
         this.descriptionFR = descrptionFR;
         this.descriptionEN = descriptionEN;
@@ -8,4 +10,5 @@ export class Projet {
         this.technos = technos;
         this.date = date;
     }
+
 }
