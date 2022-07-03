@@ -3,7 +3,7 @@
   "NAV": {
     "HOME": "Home",
     "PROJECTS": "Projects",
-    "ABOUT": "About",
+    "EXPERIENCES": "Experiences",
     "LANGUAGE": "Passer en Francais"
   },
   "PRESENTATION": {
@@ -20,5 +20,11 @@
     "FEWWORDS": "In few words",
     "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
 
+  },
+  "CAROUSEL": {
+    "SKILLS": {
+      "DATABASE" : "Database",
+      "SOFTSKILL" : "Soft-Skill"
+    }
   }
 }

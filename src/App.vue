@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container px-4 px-lg-1">
         <router-link class="navbar-brand" to="/">
-          <img :src="logo">
+          <img :src="logo" alt="logo teoislearning">
         </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4" style="display: flex">
             <li class="nav-item"><router-link class="nav-link active" to="/home">{{ $t('NAV.HOME')}}</router-link></li>
             <li class="nav-item"><router-link class="nav-link active" to="/projects">{{ $t('NAV.PROJECTS')}}</router-link></li>
-            <li class="nav-item"><router-link class="nav-link" to="/about">{{ $t('NAV.ABOUT')}}</router-link></li>
+            <li class="nav-item"><router-link class="nav-link active" to="/experiences">{{ $t('NAV.EXPERIENCES')}}</router-link></li>
           </ul>
           <div class="row ">
             <div class="col flag-cat ">
@@ -32,14 +32,11 @@
       </div>
     </nav>
   </header>
-
-  <Presentation msg="Welcome to Your Vue.js App"/>
   <router-view></router-view>
 
 </template>
 
 <script setup>
-import Presentation from "@/components/Presentation";
 let logo = require('./assets/img/logo/logo_small.png');
 let engF = require('./assets/img/nav/enFlag.svg.png');
 let frF = require('./assets/img/nav/Flag_of_France.svg.webp');
