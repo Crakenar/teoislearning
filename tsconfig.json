@@ -1,15 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "lib": ["dom", "es5", "es2015"],
     "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
     "sourceMap": true,
-    // Ensure that .d.ts files are created by tsc, but not .js files
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    // Ensure that Babel can safely transpile files in the TypeScript project
-    "isolatedModules": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "allowSyntheticDefaultImports": true
+  }
 }
