@@ -6,6 +6,10 @@
     "EXPERIENCES": "Experiences",
     "LANGUAGE": "Passer en Francais"
   },
+  "PROFILE": {
+    "MYGITHUB": "My Github",
+    "MYRESUME": "Download my Resume"
+  },
   "PRESENTATION": {
     "NAME": "Name",
     "CODENAME": "Code Name",

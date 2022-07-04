@@ -2,14 +2,14 @@
   <div>
     <div class="content">
       <div class="img">
-        <img :src="require('../assets/img/ImageTeoSki.png')" class="grow" alt="...">
+        <img :src="require('../assets/img/ImageTeoSki.png')" alt="..." class="grow">
       </div>
       <div class="buttons">
-        <button class="btn btn-info m-3 bounce-in-left">Mon Github</button>
-        <button class="btn btn-info m-3 bounce-in-right">Mon CV</button>
+        <a class="btn btn-info m-3 bounce-in-left" href="https://github.com/Crakenar" target="_blank">{{ $t('PROFILE.MYGITHUB') }}</a>
+        <a class="btn btn-info m-3 bounce-in-right" download
+           href="../assets/markdown/Experiences/CV de Teo Berguerre.pdf">{{ $t('PROFILE.MYRESUME') }}</a>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -19,11 +19,12 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 .content {
   margin-top: 5%;
   text-align: center;
+
   img {
     width: 20%;
     border-radius: 10px;
@@ -32,6 +33,7 @@ export default {
   .bounce-in-right {
     animation: bounce-in-right 2s ease;
   }
+
   @keyframes bounce-in-right {
     0% {
       opacity: 0;
@@ -41,13 +43,18 @@ export default {
       opacity: 1;
       transform: translateX(-30px);
     }
-    80% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .bounce-in-left {
     animation: bounce-in-left 2s ease;
   }
+
   @keyframes bounce-in-left {
     0% {
       opacity: 0;
@@ -57,43 +64,54 @@ export default {
       opacity: 1;
       transform: translateX(30px);
     }
-    80% { transform: translateX(-10px); }
-    100% { transform: translateX(0); }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
 
   .grow {
     animation: grow 2s ease;
   }
+
   @keyframes grow {
-    from { transform: scale(0); }
-    to { transform: scale(1); }
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 
 }
 
 @media only screen and (max-width: 500px) {
-  .content{
+  .content {
     margin-top: 20%;
   }
-  img{
-    width: 60%!important;
+  img {
+    width: 60% !important;
   }
 }
+
 @media only screen and (min-width: 500px) and (max-width: 700px) {
-  .content{
+  .content {
     margin-top: 15%;
   }
-  img{
-    width: 40%!important;
+  img {
+    width: 40% !important;
   }
 }
+
 @media only screen and (min-width: 701px) and (max-width: 933px) {
-  .content{
+  .content {
     margin-top: 10%;
   }
-  img{
-    width: 30%!important;
+  img {
+    width: 30% !important;
   }
 }
 </style>

@@ -6,33 +6,137 @@
     "imgUrl": "logo_small_icon_only_inverted.png",
     "githubUrl": "https://github.com/Crakenar/teoisleaning",
     "technos": ["Vuejs", "SCSS"],
-    "date": "date"
+    "date": "date",
+    "ongoing": "true"
   },
   {
     "id": 2,
+    "name": "Smells like Black Mirror",
+    "description": "",
+    "imgUrl": "star.jpg",
+    "githubUrl": "",
+    "technos": ["Angular", "NodeJS", "MongoDB", "SCSS"],
+    "date": "date",
+    "ongoing": "true"
+  },
+  {
+    "id": 3,
+    "name": "Match my Job",
+    "description": "Tinder Like but for finding jobs",
+    "imgUrl": "tinderlikejob.png",
+    "githubUrl": "",
+    "technos": ["?", "?", "?", "?"],
+    "date": "date",
+    "ongoing": "true"
+  },
+  {
+    "id": 4,
+    "name": "Epicurien Grenoble Me",
+    "description": "Tinder Like but for finding jobs",
+    "imgUrl": "epicurien.png",
+    "githubUrl": "",
+    "technos": ["?", "?", "?", "?"],
+    "date": "date",
+    "ongoing": "true"
+  },
+  {
+    "id": 5,
     "name": "Angular Tour of Hereos",
     "description": "Projet initiation a Angular, le but etait de suivre le tutoriel offciel d\\'angular et d\\'ensuite effectuer' +\n        ' des ameliorations.",
     "imgUrl": "TourOfHeroes.png",
     "githubUrl": "https://github.com/Crakenar/teoisleaning",
     "technos": ["Angular", "SCSS"],
-    "date": "date"
+    "date": "date",
+    "ongoing": "false"
   },
   {
-    "id": 3,
+    "id": 6,
+    "name": "Trixnet",
+    "description": "Qu'une petite partie",
+    "imgUrl": "defaultProjectImage.png",
+    "githubUrl": "https://github.com/Crakenar/Trixnet",
+    "technos": [".NetCore"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 7,
+    "name": "FaceBook Like",
+    "description": "Introduction a ASP .Net Reprise du code de mon professeur de l'epoque et ajout de fonctionnalites",
+    "imgUrl": "defaultProjectImage.png",
+    "githubUrl": "https://github.com/Crakenar/ASP.netProject",
+    "technos": [".NetCore"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 8,
+    "name": "Ile Interdite",
+    "description": "Introduction a ASP .Net Reprise du code de mon professeur de l'epoque et ajout de fonctionnalites",
+    "imgUrl": "defaultProjectImage.png",
+    "githubUrl": "https://github.com/Blinko26/Ile_Interdite",
+    "technos": ["Others", "Java"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 9,
+    "name": "Ionic",
+    "description": "Projet initiation a Angular, le but etait de suivre le tutoriel offciel d\\'angular et d\\'ensuite effectuer' +\n        ' des ameliorations.",
+    "imgUrl": "defaultProjectImage.png",
+    "githubUrl": "https://github.com/Crakenar/Ionic",
+    "technos": ["Angular", "SCSS"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 10,
+    "name": "Grenoble Muay Thai",
+    "description": "",
+    "imgUrl": "muaythai.png",
+    "githubUrl": "https://github.com/Blinko26/Projet-Grenoble-Muai-Thai-GMT-",
+    "technos": ["PHP"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 11,
+    "name": "Symfony Test",
+    "description": "",
+    "imgUrl": "symfony.png",
+    "githubUrl": "https://github.com/Ng-B/test-unitaire",
+    "technos": ["Symfony", "PHP"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 12,
+    "name": "Symfony E-Commerce",
+    "description": "",
+    "imgUrl": "symfony.png",
+    "githubUrl": "https://github.com/Crakenar/teoisleaning",
+    "technos": ["Symfony", "PHP"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 13,
+    "name": "GameJam 2020",
+    "description": "",
+    "imgUrl": "bird_blue.png",
+    "githubUrl": "https://github.com/Brewyard/gameJam2020",
+    "technos": ["Python", "Others"],
+    "date": "date",
+    "ongoing": "false"
+  },
+  {
+    "id": 14,
     "name": "SVG-Animations",
     "description": "Projet initiation a Angular, le but etait de suivre le tutoriel offciel d\\'angular et d\\'ensuite effectuer' +\n        ' des ameliorations.",
     "imgUrl": "animationsvg.png",
     "githubUrl": "https://github.com/Crakenar/teoisleaning",
-    "technos": ["Angular", "SCSS"],
-    "date": "date"
-  },
-  {
-    "id": 4,
-    "name": "Angular Tour of Hereos",
-    "description": "Projet initiation a Angular, le but etait de suivre le tutoriel offciel d\\'angular et d\\'ensuite effectuer' +\n        ' des ameliorations.",
-    "imgUrl": "TourOfHeroes.png",
-    "githubUrl": "https://github.com/Crakenar/teoisleaning",
-    "technos": ["Angular", "SCSS"],
-    "date": "date"
+    "technos": ["Others"],
+    "date": "date",
+    "ongoing": "false"
   }
 ]

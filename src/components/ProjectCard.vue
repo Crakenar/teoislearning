@@ -1,10 +1,13 @@
 <template>
   <div>
     <a data-bs-toggle="modal" :data-bs-target="'#' + props.project.name.toLowerCase().split(' ').join('')" class="card" style="width: 18rem; max-height: 350px; overflow-y: hidden">
+      <div class="ring" v-if="props.project.ongoing === 'true'"></div>
+      <span class="status" v-if="props.project.ongoing === 'true'">En cours</span>
+      <span class="status" v-else>Finis</span>
       <img :src="require('../assets/img/Projets/' +props.project.imgUrl)" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{props.project.name}}</h5>
-        <p class="card-text">{{props.project.technos}}</p>
+        <p class="card-text">{{props.project.technos.slice(0,3)}}</p>
       </div>
     </a>
 
@@ -44,15 +47,15 @@ import {defineProps} from "vue";
 const props = defineProps({
   project: Projet,
 });
-
+/*TODO: remplace the loading/ongoing animation by me own -> idea : same as tik tok*/
 
 </script>
 
 <style scoped lang="scss">
 .card {
   img {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -64,4 +67,49 @@ a, a:hover,a:visited,a:focus, a:active  {
   outline: 0;
   cursor: pointer;
 }
+
+.ring {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 1px rgba(255,255,255, 0.3);
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 1px #e65c00;
+  }
+
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 1px #18b201;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 1px #0456c8;
+  }
+}
+
+.status{
+  position: absolute;
+  right: 5px;
+  top: 30px;
+  font-size: .6rem;
+}
+
 </style>

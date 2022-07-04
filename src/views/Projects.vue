@@ -24,7 +24,7 @@
     </ul>
   </div>
   <div class="row">
-    <div v-for="(project, index) in filteredList" :key="index" class="p-lg-2 col-lg-4 content-center">
+    <div v-for="(project, index) in filteredList" :key="index" class="p-lg-2 col-xs-12 col-md-6 col-lg-4 content-center">
       <ProjectCard :project="project"/>
     </div>
   </div>
