@@ -11,7 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4" style="display: flex">
-            <li class="nav-item"><router-link class="nav-link active" to="/home">{{ $t('NAV.HOME')}}</router-link></li>
+            <li class="nav-item"><router-link class="nav-link active" to="/profile">{{ $t('NAV.HOME')}}</router-link></li>
             <li class="nav-item"><router-link class="nav-link active" to="/projects">{{ $t('NAV.PROJECTS')}}</router-link></li>
             <li class="nav-item"><router-link class="nav-link active" to="/experiences">{{ $t('NAV.EXPERIENCES')}}</router-link></li>
           </ul>
