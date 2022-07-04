@@ -83,7 +83,8 @@ $total: 8;
 
   @keyframes typewriter {
     to {
-      left: 100%
+      left: 100%;
+      visibility: hidden;
     }
   }
 
