@@ -1,6 +1,6 @@
 <template>
   <div>
-    <c2 :list-tec="listTec" :key="refresh" />
+    <C2 :list-tec="listTec" @techChanged="emitNewTech"/>
     <div class="row" style="margin-top: 50px;">
 <!--border on hover + change color if active      -->
       <div class="col-lg-6 p-lg-4 border" :class="isFEOn ? 'active' :'' " @click="changeTec('FE')">Front-End</div>
@@ -13,24 +13,36 @@
 
 <script setup>
 import C2 from "@/components/c2";
-import {ref} from "vue";
+import {Technos} from "@/Model/Technos";
+import {ref, defineEmits} from "vue";
 
+
+const emit = defineEmits(['newTech']);
 let isFEOn = true;
 let isBEOn,isSFOn,isDBOn = false;
 
+/* WE have here 2 times an emit (c2 -> Carousel -> Presentation),
+   we may use a store to improve code readability and scalability
+*/
+function emitNewTech(value) {
+  if (value){
+    emit('newTech', value)
+  }
+}
+
 let listTec = ref([
-  require('../assets/img/Presentation/icons/angular.svg'),
-  require('../assets/img/Presentation/icons/vuejs.svg'),
-  require('../assets/img/Presentation/icons/react.svg'),
+      new Technos('angular',require("@/assets/img/Presentation/icons/angular.svg")),
+      new Technos('vuejs',require("@/assets/img/Presentation/icons/vuejs.svg")),
+      new Technos('react',require("@/assets/img/Presentation/icons/react.svg"))
 ]);
 
 function changeTec(tec) {
   switch (tec) {
     case 'FE':
       listTec.value = [
-        require('../assets/img/Presentation/icons/angular.svg'),
-        require('../assets/img/Presentation/icons/vuejs.svg'),
-        require('../assets/img/Presentation/icons/react.svg'),
+        new Technos('angular',require('../assets/img/Presentation/icons/angular.svg')),
+        new Technos('vuejs',require('../assets/img/Presentation/icons/vuejs.svg')),
+        new Technos('react',require('../assets/img/Presentation/icons/react.svg'))
       ]
       this.isFEOn = !this.isFEOn
       this.isDBOn = false;
@@ -40,7 +52,7 @@ function changeTec(tec) {
 
     case 'BE':
       listTec.value = [
-        require('../assets/img/Presentation/icons/netcore.svg')
+          new Technos('netcore',require('../assets/img/Presentation/icons/netcore.svg'))
       ];
       this.isBEOn = !this.isBEOn
       this.isFEOn = false;
@@ -50,8 +62,8 @@ function changeTec(tec) {
 
     case 'SF':
       listTec.value = [
-        require('../assets/img/Presentation/carousel/softskills/curieux.png'),
-        require('../assets/img/Presentation/carousel/softskills/attentif.png')
+        new Technos('curious',require('../assets/img/Presentation/carousel/softskills/curieux.png')),
+        new Technos('attentif',require('../assets/img/Presentation/carousel/softskills/attentif.png'))
       ]
       this.isSFOn = !this.isSFOn
       this.isFEOn = false
@@ -61,8 +73,7 @@ function changeTec(tec) {
 
     case 'DB':
       listTec.value = [
-        require('../assets/img/Presentation/icons/mariadb.svg'),
-        require('../assets/img/Presentation/icons/mysql.svg')
+        new Technos('mysql',require('../assets/img/Presentation/icons/mysql.svg'))
       ]
       this.isDBOn = !this.isDBOn
       this.isFEOn = false;

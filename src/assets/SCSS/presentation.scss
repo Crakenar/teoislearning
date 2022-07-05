@@ -10,6 +10,33 @@ $total: 8;
   max-height: 1080px;
 }
 
+.imgLevel {
+  cursor: help;
+  display: flex;
+  font-size: 2.6rem;
+  margin-top: -2.4%;
+  img {
+    height: 50px;
+  }
+}
+
+.code-block2 {
+  border-radius: 10px;
+  background: $bg-color;
+  height: 30.5%;
+  margin: 10px;
+  color: $color-writing;
+  padding: 8px;
+  line-height: 16px;
+  background: white;
+  border: 1px solid white;
+  box-shadow: 0 1px 0 1px black,
+  inset 0 1px 0 1px black,
+  0 0 0 1px black,
+  inset 0 0 0 1px black;
+  position: relative;
+}
+
 .code-block {
   border-radius: 10px;
   background: $bg-color;
@@ -83,7 +110,8 @@ $total: 8;
 
   @keyframes typewriter {
     to {
-      left: 100%
+      left: 100%;
+      visibility: hidden;
     }
   }
 
