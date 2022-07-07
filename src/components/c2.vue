@@ -21,14 +21,12 @@
 </template>
 
 <script setup>
-import {defineEmits, defineProps, onMounted, onUpdated} from "vue";
+import {defineProps, onMounted, onUpdated} from "vue";
+import {store} from "@/Store";
 
 const props = defineProps({
   listTec: Array,
 })
-
-const emit = defineEmits(['techChanged']);
-let tech = "";
 
 function detectNewTech() {
   //IF CAROUSEL WITH SLIDE -> DELAY FOR .ACTIVE TO GO ON THE HTML ELEMENT
@@ -42,8 +40,8 @@ function detectNewTech() {
 */
   let tecHTML = document.getElementsByClassName('carousel-item active');
   if (tecHTML) {
-    tech = tecHTML[0].id;
-    emit('techChanged', tech);
+    //put in store the value of tecHTMl to share with others compoinents
+    store.changeTech(tecHTML[0].id);
   }
 }
 
