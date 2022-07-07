@@ -21,7 +21,10 @@
             </div>
             <div class="col ">
               <div class=" form-switch">
-                <input class="form-check-input" @change="$i18n.locale === 'fr' ? $i18n.locale = 'en' : $i18n.locale = 'fr' " type="checkbox" id="flexSwitchLanguage">
+                <input class="form-check-input"
+                       :checked="$i18n.locale === 'en'"
+                       @change="changeLanguage($i18n)"
+                       type="checkbox" id="flexSwitchLanguage">
               </div>
             </div>
             <div class="col flag-cat ">
@@ -40,6 +43,16 @@
 let logo = require('./assets/img/logo/logo_small.png');
 let engF = require('./assets/img/nav/enFlag.svg.png');
 let frF = require('./assets/img/nav/Flag_of_France.svg.webp');
+
+function changeLanguage(i18n) {
+  const langLS = localStorage.getItem('lang');
+  if (langLS && langLS !== i18n.locale){
+    i18n.locale = langLS;
+  }else {
+    i18n.locale === 'fr' ? i18n.locale = 'en' : i18n.locale = 'fr';
+    localStorage.setItem('lang', i18n.locale);
+  }
+}
 
 </script>
 
