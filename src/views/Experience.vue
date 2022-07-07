@@ -30,10 +30,9 @@
               </div>
               <div class="modal-body">
                 <div class="row">
-                  <div class="col-lg-9" style="border-right: 2px solid black">
-                    <p v-if="$i18n.locale === 'fr'" class="card-text">{{ exp.descriptionFR }}</p>
-                    <p v-else class="card-text">{{ exp.descriptionEN }}</p>
-                  </div>
+<!--                  <div v-html="markdownhtml" class="col-lg-9" style="border-right: 2px solid black">-->
+<!--                  </div>-->
+                  <MarkdownHTML :urlMD="exp.descriptionFR" />
                   <div class="col-lg-3">
                     <img :src="exp.imageUrl" :alt="'image de ' + exp.company">
                   </div>
@@ -52,12 +51,14 @@
 
 <script setup>
 import {Experience} from "@/Model/Experience";
+import MarkdownHTML from  "@/components/MarkdownHTML";
 
+//Can simplify the object, we do not need 2 description => use $i18n.locale === ('fr' | 'en')
 const expList = [
   new Experience(
       'Developpeur',
-      'nul',
-      'mull',
+      require('../assets/markdown/Experiences/fr/AM-Creations.md'),
+      '../assets/markdown/Experiences/en/AM-Creations.md',
       '5 months',
       '2022',
       'AM-Creations',
@@ -66,8 +67,8 @@ const expList = [
   ),
   new Experience(
       'Analyste Developpeur',
-      'nul',
-      'mull',
+      require('../assets/markdown/Experiences/fr/Axopen.md'),
+      '../assets/markdown/Experiences/en/Axopen.md',
       '4 months',
       '2021 - 2022',
       'Axopen',
@@ -76,33 +77,8 @@ const expList = [
   ),
   new Experience(
       'Developpeur Full-Stack',
-      'Développement du nouvel intranet “Trixnet” : Dotnet Core MVC, Orchard, SQL, SASS, Bootstrap\n' +
-      '\n \nand ' +
-      'o Recueil du besoin des différents services afin d’effectuer une planification précise du projet avec une méthodologie type agile.\n' +
-      '\n' +
-      'o Mise en place de la base de données pour le Headless CMS OrcardCore.\n' +
-      '\n' +
-      'o Mise en place du serveur IIS pour le déploiement.\n' +
-      '\n' +
-      'o Mise en place du git avec un workflow basique pour vérifier certains tests majeurs.\n' +
-      '\n' +
-      'o Dockerisation de la BDD pour travailler en remote.\n' +
-      '\n' +
-      'o Utilisation de .Net Core MVC pour le développement\n' +
-      '\n' +
-      '§ Razor pages\n' +
-      '\n' +
-      '§ Tag Helpers\n' +
-      '\n' +
-      '§ Dependency Injection\n' +
-      '\n' +
-      'o Utilisation d’Entity Framework pour le back-end et LinQ.\n' +
-      '\n' +
-      'o Développement d’une application Organigramme “from scratch” avec un côté administrateur par service.\n' +
-      '\n' +
-      'Developpement et support Application : \n' +
-      'JAVAEE, SQL',
-      'mull',
+      require('../assets/markdown/Experiences/fr/Trixell.md'),
+      '../assets/markdown/Experiences/en/Trixell.md',
       '1 year',
       '2020 - 2021',
       'Trixell',
