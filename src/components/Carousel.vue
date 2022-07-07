@@ -1,6 +1,6 @@
 <template>
   <div>
-    <C2 :list-tec="listTec" @techChanged="emitNewTech"/>
+    <C2 :list-tec="listTec"/>
     <div class="row" style="margin-top: 50px;">
 <!--border on hover + change color if active      -->
       <div class="col-lg-6 p-lg-4 border" :class="{active: isFEOn}" @click="changeTec('FE')">Front-End</div>
@@ -10,27 +10,16 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import C2 from "@/components/c2";
 import {Technos} from "@/Model/Technos";
-import {ref, defineEmits} from "vue";
+import {ref} from "vue";
 
-
-const emit = defineEmits(['newTech']);
 const isFEOn = ref(true);
 const isBEOn = ref(false);
 const isSFOn = ref(false);
 const isDBOn = ref(false);
 
-/* WE have here 2 times an emit (c2 -> Carousel -> Presentation),
-   we may use a store to improve code readability and scalability
-*/
-function emitNewTech(value) {
-  if (value){
-    emit('newTech', value)
-  }
-}
 
 let listTec = ref([
       new Technos('angular',require("@/assets/img/Presentation/icons/angular.svg")),

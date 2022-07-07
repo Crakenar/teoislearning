@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="col">
-      <Carousel @newTech="printBubble"/>
+      <Carousel/>
     </div>
   </div>
 </template>
@@ -54,11 +54,12 @@
 import moment from 'moment';
 import Carousel from './Carousel'
 import {onMounted, ref} from "vue";
+import {store} from "@/Store";
+
 
 let dresser;
 const capacityNumber = ref(0);
 const isAttack = ref(false);
-//let valueTech = '';
 let month = moment().format('M');
 let percentageMonthWidth = month / 12 * 100;
 let stringFinal = 'width : ' + percentageMonthWidth + '%';
@@ -72,13 +73,11 @@ const URL_LEVEL = require('../assets/img/Presentation/icons/level-up.png');
 //settimeinterval X
 //eventlistener X
 function attack(value) {
-  console.log(isAttack.value)
-  console.log(isAttack.value)
+  console.log(store.TechSelected)
   isAttack.value = !isAttack.value;
   //en fonction de la capacite, charger un json pour voir les possibilitees en fonction de "l'ennemi"
   //load le text json ici
   capacityNumber.value = value;
-  console.log(capacityNumber)
 }
 
 function endAnimationListener(event) {
@@ -88,12 +87,6 @@ function endAnimationListener(event) {
       // isAttack = false;
       // }
       break;
-  }
-}
-
-function printBubble(value) {
-  if (value) {
-    // valueTech = value
   }
 }
 

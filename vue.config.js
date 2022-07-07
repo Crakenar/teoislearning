@@ -9,5 +9,13 @@ module.exports = {
       compositionOnly: false,
       fullInstall: true
     }
+  },
+  configureWebpack: {
+    module: {
+      rules: [ {
+        test: /\.md$/,
+        loader: 'raw-loader',
+      }]
+    }
   }
 }
