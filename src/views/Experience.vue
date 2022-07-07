@@ -10,14 +10,9 @@
             </span>
           </div>
         </div>
-        <a data-bs-toggle="modal" :data-bs-target="'#'+exp.company" class="timeline-content">
+        <a :data-bs-target="'#'+exp.company" class="timeline-content" data-bs-toggle="modal">
           <h5 class="title">{{ exp.name }}</h5>
-          <p v-if="$i18n.locale === 'fr'" class="description">
-            {{ exp.descriptionFR }}
-          </p>
-          <p v-else class="description">
-            {{ exp.descriptionEN }}
-          </p>
+          <img :src="exp.imageUrl" class="img-timeline" alt="">
         </a>
         <!--MODAL-->
         <div :id="exp.company" :aria-labelledby="exp.company"
@@ -29,13 +24,12 @@
                 <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
               </div>
               <div class="modal-body">
-                <div class="row">
-<!--                  <div v-html="markdownhtml" class="col-lg-9" style="border-right: 2px solid black">-->
-<!--                  </div>-->
-                  <MarkdownHTML :urlMD="exp.descriptionFR" />
-                  <div class="col-lg-3">
-                    <img :src="exp.imageUrl" :alt="'image de ' + exp.company">
-                  </div>
+                <div>
+                  <MarkdownHTML v-if="$i18n.locale === 'fr'" :urlMD="exp.descriptionFR"/>
+                  <MarkdownHTML v-else :urlMD="exp.descriptionEN"/>
+                </div>
+                <div>
+                  <img :alt="'image de ' + exp.company" :src="exp.imageUrl" class="center-img img-modal">
                 </div>
               </div>
               <div class="modal-footer">
@@ -51,14 +45,15 @@
 
 <script setup>
 import {Experience} from "@/Model/Experience";
-import MarkdownHTML from  "@/components/MarkdownHTML";
+import MarkdownHTML from "@/components/MarkdownHTML";
 
 //Can simplify the object, we do not need 2 description => use $i18n.locale === ('fr' | 'en')
+//need require bc I cannot import using a variable in MarkdownHTML
 const expList = [
   new Experience(
       'Developpeur',
       require('../assets/markdown/Experiences/fr/AM-Creations.md'),
-      '../assets/markdown/Experiences/en/AM-Creations.md',
+      require('../assets/markdown/Experiences/en/AM-Creations.md'),
       '5 months',
       '2022',
       'AM-Creations',
@@ -68,7 +63,7 @@ const expList = [
   new Experience(
       'Analyste Developpeur',
       require('../assets/markdown/Experiences/fr/Axopen.md'),
-      '../assets/markdown/Experiences/en/Axopen.md',
+      require('../assets/markdown/Experiences/en/Axopen.md'),
       '4 months',
       '2021 - 2022',
       'Axopen',
@@ -78,17 +73,17 @@ const expList = [
   new Experience(
       'Developpeur Full-Stack',
       require('../assets/markdown/Experiences/fr/Trixell.md'),
-      '../assets/markdown/Experiences/en/Trixell.md',
+      require('../assets/markdown/Experiences/en/Trixell.md'),
       '1 year',
       '2020 - 2021',
       'Trixell',
       '07 October, 2020',
-       require('../assets/img/Experiences/trixell.png')
+      require('../assets/img/Experiences/trixell.png')
   ),
   new Experience(
       'Stage Developpeur',
-      'nul',
-      'mull',
+      require('../assets/markdown/Experiences/fr/Axopen.md'),
+      require('../assets/markdown/Experiences/fr/Axopen.md'),
       '4.5 months',
       '2020',
       'Mobiteach',
@@ -105,14 +100,19 @@ const expList = [
   margin-top: 30px;
 }
 
-img {
+.img-modal {
   width: 200px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
 }
 
-a, a:hover,a:visited,a:focus, a:active  {
+.img-timeline {
+  width: 120px;
+}
+
+
+a, a:hover, a:visited, a:focus, a:active {
   text-decoration: none;
   color: inherit;
   outline: 0;
@@ -229,7 +229,7 @@ a, a:hover,a:visited,a:focus, a:active  {
 .main-timeline .timeline-content {
   width: 50%;
   padding: 20px 0 20px 50px;
-  float: right
+  float: right;
 }
 
 .main-timeline .title {
