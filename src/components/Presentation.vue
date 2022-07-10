@@ -29,7 +29,7 @@
       <div id="dresser" class="col dresseur" :class="{'loadBubble slide-left': isAttack}">
         <img :src="URL_DRESSEUR_PIC" alt="icon of an angular image">
       </div>
-      <div class="bubble"></div>
+      <Bubble :is-attack="isAttack"/>
       <div class="imgLevel" data-bs-toggle="tooltip" title="how many years of experience since my first internship">
         <img :src="URL_LEVEL" alt="free icon of a level by Freepik">
         <span>{{ yearExp }}</span>
@@ -38,11 +38,10 @@
         <div :style="stringFinal" class="progress-bar"></div>
       </div>
       <div class="code-block2 row attack">
-
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 1}" @click="attack(1)"><i class="i--1"></i>Maitrise du Framework ?</div>
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 2}" @click="attack(2)"><i class="i--2"></i>Apprentissage ?</div>
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 3}" @click="attack(3)"><i class="i--3"></i>Interet ?</div>
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 4}" @click="attack(4)"><i class="i--4"></i>Fuite ?</div>
+        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 1}" @click="attack(1)"><i class="i--1"></i>{{$t('ATTACKS.MASTERY')}}</div>
+        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 2}" @click="attack(2)"><i class="i--2"></i>{{$t('ATTACKS.LEARNINGCURVE')}}</div>
+        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 3}" @click="attack(3)"><i class="i--3"></i>{{$t('ATTACKS.INTEREST')}}</div>
+        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 4}" @click="attack(4)"><i class="i--4"></i>{{$t('ATTACKS.ESCAPE')}}</div>
       </div>
     </div>
     <div class="col">
@@ -53,6 +52,7 @@
 <script setup>
 import moment from 'moment';
 import Carousel from './Carousel'
+import Bubble from '@/components/Bubble';
 import {onMounted, ref} from "vue";
 import {store} from "@/Store";
 
@@ -73,11 +73,12 @@ const URL_LEVEL = require('../assets/img/Presentation/icons/level-up.png');
 //settimeinterval X
 //eventlistener X
 function attack(value) {
-  console.log(store.TechSelected)
+  store.changeSkill(value);
   isAttack.value = !isAttack.value;
   //en fonction de la capacite, charger un json pour voir les possibilitees en fonction de "l'ennemi"
   //load le text json ici
   capacityNumber.value = value;
+  console.log(value)
 }
 
 function endAnimationListener(event) {
@@ -98,16 +99,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import '../assets/SCSS/presentation.scss';
-//
-//.bubble {
-//  height: 300px;
-//  width: 450px;
-//  background: white;
-//  position: absolute;
-//  top: 50%;
-//  left: 25%;
-//}
-
 .attack {
   .i {
     width: 0!important;

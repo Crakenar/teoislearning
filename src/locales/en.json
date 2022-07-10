@@ -25,6 +25,12 @@
     "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
 
   },
+  "ATTACKS": {
+    "MASTERY": "Mastery of the technology",
+    "LEARNINGCURVE": "Learning Curve",
+    "INTEREST" : "Interest",
+    "ESCAPE": "Escape"
+  },
   "CAROUSEL": {
     "SKILLS": {
       "DATABASE" : "Database",

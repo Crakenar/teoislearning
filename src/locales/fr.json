@@ -24,6 +24,12 @@
     "FEWWORDS": "En quelques mots",
     "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
   },
+  "ATTACKS": {
+    "MASTERY": "Maitrise de la technologie",
+    "LEARNINGCURVE": "Apprentissage",
+    "INTEREST" : "Interet",
+    "ESCAPE": "Fuite"
+  },
   "CAROUSEL": {
     "SKILLS": {
       "DATABASE" : "Base de donnee",

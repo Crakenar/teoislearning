@@ -1,0 +1,166 @@
+[
+  {
+    "idSkill": 1,
+    "skillDesc": "mastery",
+    "TechList": [
+      {
+        "id": "angular",
+        "descriptionFR": "je maitrise bien angular",
+        "descriptionEN": "ive done some things with angular"
+      },
+      {
+        "id": "react",
+        "descriptionFR": "je ne connais pas react",
+        "descriptionEN": "only one little project using react"
+      },
+      {
+        "id": "vuejs",
+        "descriptionFR": "je maitrise bien vuejs",
+        "descriptionEN": "knows how to do an application but still need more experience"
+      },
+      {
+        "id": "netcore",
+        "descriptionFR": "je maitrise bien netcore",
+        "descriptionEN": "ive done some things with netcore, full site, api..."
+      },
+      {
+        "id": "mysql",
+        "descriptionFR": "Classique BDD CRUD, join, procedure etc",
+        "descriptionEN": "Like almost every DB I worked with, CRUD, join etc classic"
+      },
+      {
+        "id": "attentif",
+        "descriptionFR": "Je ne parle peut etre pas beaucoup mais je suis a l'ecoute",
+        "descriptionEN": "I'm not the extrovert type but I like to listen to other and I'm focus when I'm listening"
+      },
+      {
+        "id": "curious",
+        "descriptionFR": "Ouais je suis curieux ouais",
+        "descriptionEN": "I'm really curious and so eager to learn new things"
+      }
+    ]
+  },
+  {
+    "idSkill": 2,
+    "skillDesc": "learningcurve",
+    "TechList": [
+      {
+        "id": "angular",
+        "descriptionFR": "je ne me forme pas actuellement a angular",
+        "descriptionEN": "atm I do not learn new things in angular because I'm mainly focused on VUE"
+      },
+      {
+        "id": "react",
+        "descriptionFR": "je ne me forme pas actuellement a react",
+        "description": "Why would I do that to myself ?"
+      },
+      {
+        "id": "vuejs",
+        "descriptionFR": "je me forme intensivement a vuejs",
+        "descriptionEN": "I'm learning intensively VUEJS"
+      },
+      {
+        "id": "netcore",
+        "descriptionFR": "je maitrise tellement bien netcore que je n'ai plus rien a apprendre",
+        "descriptionEN": "I'm just god with netcore :nocap"
+      },
+      {
+        "id": "mysql",
+        "descriptionFR": "Classique BDD CRUD, join, procedure etc",
+        "descriptionEN": "Like almost every DB I worked with, CRUD, join etc classic"
+      },
+      {
+        "id": "attentif",
+        "descriptionFR": "Je ne parle peut etre pas beaucoup mais je suis a l'ecoute",
+        "descriptionEN": "I'm not the extrovert type but I like to listen to other and I'm focus when I'm listening"
+      },
+      {
+        "id": "curious",
+        "descriptionFR": "Ouais je suis curieux ouais",
+        "descriptionEN": "I'm really curious and so eager to learn new things"
+      }
+    ]
+  },
+  {
+    "idSkill": 3,
+    "skillDesc": "interest",
+    "TechList": [
+      {
+        "id": "angular",
+        "descriptionFR": "super interessant framework",
+        "descriptionEN": "really interesting framework to work with,I love the fact that all angular projects are somewhat similar"
+      },
+      {
+        "id": "react",
+        "descriptionFR": "rien a foutre FR",
+        "descriptionEN": "atm I do not care about this one from a personal view"
+      },
+      {
+        "id": "vuejs",
+        "descriptionFR": "super interessant c'est pour cela que j'apprend vuejs",
+        "descriptionEN": "Really interesting and that is why I'm learning and loving it"
+      },
+      {
+        "id": "netcore",
+        "descriptionFR": "c'est sympa surtout .netcore et .Net >= 5",
+        "descriptionEN": ".netcore is really cool and .net >= 5 too"
+      },
+      {
+        "id": "mysql",
+        "descriptionFR": "Classique BDD CRUD, join, procedure etc",
+        "descriptionEN": "Like almost every DB I worked with, CRUD, join etc classic"
+      },
+      {
+        "id": "attentif",
+        "descriptionFR": "Je ne parle peut etre pas beaucoup mais je suis a l'ecoute",
+        "descriptionEN": "I'm not the extrovert type but I like to listen to other and I'm focus when I'm listening"
+      },
+      {
+        "id": "curious",
+        "descriptionFR": "Ouais je suis curieux ouais",
+        "descriptionEN": "I'm really curious and so eager to learn new things"
+      }
+    ]
+  },
+  {
+    "idSkill": 4,
+    "skillDesc": "escape",
+    "TechList": [
+      {
+        "id": "angular",
+        "descriptionFR": "aucun interet a fuire, je sais faire des choses avec et le framework est cool",
+        "descriptionEN": "Why would I try to escape ? I know how to use it and the framework is nice"
+      },
+      {
+        "id": "react",
+        "descriptionFR": "a fuire, je ne comprends rien avec les useState",
+        "descriptionEN": "Yea let's escape,those \"useState etc\" are scaring me, don't fall behind or I'm leaving you !!!"
+      },
+      {
+        "id": "vuejs",
+        "descriptionFR": "je suis en kiff total,c'est plutot a lui de me fuir",
+        "descriptionEN": "I'm in love, Vue should fear me"
+      },
+      {
+        "id": "netcore",
+        "descriptionFR": "Nan c'est ok, il peut venir a moi je suis pret",
+        "descriptionEN": "Nah I'm good he can come at me I'm ready"
+      },
+      {
+        "id": "mysql",
+        "descriptionFR": "Classique BDD CRUD, join, procedure etc",
+        "descriptionEN": "Like almost every DB I worked with, CRUD, join etc classic"
+      },
+      {
+        "id": "attentif",
+        "descriptionFR": "Je ne parle peut etre pas beaucoup mais je suis a l'ecoute",
+        "descriptionEN": "I'm not the extrovert type but I like to listen to other and I'm focus when I'm listening"
+      },
+      {
+        "id": "curious",
+        "descriptionFR": "Ouais je suis curieux ouais",
+        "descriptionEN": "I'm really curious and so eager to learn new things"
+      }
+    ]
+  }
+]
