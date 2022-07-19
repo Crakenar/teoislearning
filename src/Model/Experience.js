@@ -1,12 +1,11 @@
 export class Experience {
-    constructor(name,descriptionFR,descriptionEN, duration, year, company, dateEnroll, imageUrl) {
-        this.name = name;
-        this.descriptionFR = descriptionFR;
-        this.descriptionEN = descriptionEN;
-        this.duration = duration;
-        this.year = year;
+    constructor(title,descriptionMD, language, typeMD, date_work, company,duration, imgPath) {
+        this.title = title;
+        this.descriptionMD = descriptionMD;
+        this.typeMD = typeMD;
+        this.date_work = date_work;
         this.company = company;
-        this.dateEnroll = dateEnroll;
-        this.imageUrl = imageUrl;
+        this.duration = duration;
+        this.imgPath = imgPath;
     }
 }
