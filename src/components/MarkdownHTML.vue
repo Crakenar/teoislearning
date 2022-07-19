@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+//make it a slot ?
 import {computed, defineProps} from "vue";
 import {marked} from "marked";
 const props = defineProps({

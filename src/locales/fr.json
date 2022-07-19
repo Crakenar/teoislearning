@@ -35,5 +35,11 @@
       "DATABASE" : "Base de donnee",
       "SOFTSKILL" : "Qualites Humaines"
     }
+  },
+  "PROJECT": {
+    "PROGRESS": "En cours",
+    "FINISHED": "Fini",
+  "NONE": "Aucun",
+    "ALL": "Tout"
   }
 }
