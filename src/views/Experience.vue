@@ -12,7 +12,7 @@
         </div>
         <a :data-bs-target="'#'+exp.company" class="timeline-content" data-bs-toggle="modal">
           <h5 class="title">{{ exp.title }}</h5>
-          <img :src="exp.imgPath" class="img-timeline" :alt="exp.imgPath">
+          <img :src="getPathImg(exp.imgPath)" class="img-timeline" :alt="exp.imgPath">
         </a>
         <!--MODAL-->
         <div :id="exp.company" :aria-labelledby="exp.company"
@@ -28,7 +28,7 @@
                   <MarkdownHTML :descriptionMD="exp.descriptionMD"/>
                 </div>
                 <div>
-                  <img :alt="'image de ' + exp.company" :src="exp.imgPath" class="center-img img-modal">
+                  <img :alt="'image de ' + exp.company" :src="getPathImg(exp.imgPath)" class="center-img img-modal">
                 </div>
               </div>
               <div class="modal-footer">
@@ -43,12 +43,11 @@
 </template>
 
 <script setup>
-// import {Experience} from "@/Model/Experience";
 import MarkdownHTML from "@/components/MarkdownHTML";
 import axios from "axios";
 import {onMounted, ref} from "vue";
 //Can simplify the object, we do not need 2 description => use $i18n.locale === ('fr' | 'en')
-//need require bc I cannot import using a variable in MarkdownHTML
+
 const expList = ref(null);
 onMounted(() => {
   axios.get('https://teoislearning-md-api.herokuapp.com/api/md').then((res) =>{
@@ -56,6 +55,10 @@ onMounted(() => {
     console.log(expList)
   });
 });
+
+function getPathImg(value){
+  return require(`../assets/img/Experiences/${value}`)
+}
 
 </script>
 
