@@ -42,6 +42,7 @@ const ongoing = computed(() => {
 
 <style scoped lang="scss">
 .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   img {
     height: 120px;
     width: 120px;

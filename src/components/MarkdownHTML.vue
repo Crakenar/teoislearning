@@ -9,9 +9,9 @@
 import {computed, defineProps} from "vue";
 import {marked} from "marked";
 const props = defineProps({
-  urlMD: String
+  descriptionMD: String
 });
-const mdHTML = computed(() => marked(props.urlMD.default ? props.urlMD.default : ''))
+const mdHTML = computed(() => marked(props.descriptionMD ? props.descriptionMD : ''))
 
 
 </script>

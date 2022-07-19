@@ -5,14 +5,14 @@
         <div class="date-content">
           <div class="date-outer">
             <span class="date">
+              <span class="year">{{ exp.date_work }}</span>
               <span class="month">{{ exp.duration }}</span>
-              <span class="year">{{ exp.year }}</span>
             </span>
           </div>
         </div>
         <a :data-bs-target="'#'+exp.company" class="timeline-content" data-bs-toggle="modal">
-          <h5 class="title">{{ exp.name }}</h5>
-          <img :src="exp.imageUrl" class="img-timeline" alt="">
+          <h5 class="title">{{ exp.title }}</h5>
+          <img :src="exp.imgPath" class="img-timeline" :alt="exp.imgPath">
         </a>
         <!--MODAL-->
         <div :id="exp.company" :aria-labelledby="exp.company"
@@ -20,16 +20,15 @@
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 id="exampleModalLabel" class="modal-title">{{ exp.name }}</h5>
+                <h5 id="exampleModalLabel" class="modal-title">{{ exp.title }}</h5>
                 <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
               </div>
               <div class="modal-body">
                 <div>
-                  <MarkdownHTML v-if="$i18n.locale === 'fr'" :urlMD="exp.descriptionFR"/>
-                  <MarkdownHTML v-else :urlMD="exp.descriptionEN"/>
+                  <MarkdownHTML :descriptionMD="exp.descriptionMD"/>
                 </div>
                 <div>
-                  <img :alt="'image de ' + exp.company" :src="exp.imageUrl" class="center-img img-modal">
+                  <img :alt="'image de ' + exp.company" :src="exp.imgPath" class="center-img img-modal">
                 </div>
               </div>
               <div class="modal-footer">
@@ -44,53 +43,20 @@
 </template>
 
 <script setup>
-import {Experience} from "@/Model/Experience";
+// import {Experience} from "@/Model/Experience";
 import MarkdownHTML from "@/components/MarkdownHTML";
-
+import axios from "axios";
+import {onMounted, ref} from "vue";
 //Can simplify the object, we do not need 2 description => use $i18n.locale === ('fr' | 'en')
 //need require bc I cannot import using a variable in MarkdownHTML
-const expList = [
-  new Experience(
-      'Developpeur',
-      require('../assets/markdown/Experiences/fr/AM-Creations.md'),
-      require('../assets/markdown/Experiences/en/AM-Creations.md'),
-      '5 months',
-      '2022',
-      'AM-Creations',
-      '02 February, 2022',
-      require('../assets/img/Experiences/amcreations.png')
-  ),
-  new Experience(
-      'Analyste Developpeur',
-      require('../assets/markdown/Experiences/fr/Axopen.md'),
-      require('../assets/markdown/Experiences/en/Axopen.md'),
-      '4 months',
-      '2021 - 2022',
-      'Axopen',
-      '04 October, 2021',
-      require('../assets/img/Experiences/axopen.png')
-  ),
-  new Experience(
-      'Developpeur Full-Stack',
-      require('../assets/markdown/Experiences/fr/Trixell.md'),
-      require('../assets/markdown/Experiences/en/Trixell.md'),
-      '1 year',
-      '2020 - 2021',
-      'Trixell',
-      '07 October, 2020',
-      require('../assets/img/Experiences/trixell.png')
-  ),
-  new Experience(
-      'Stage Developpeur',
-      require('../assets/markdown/Experiences/fr/Axopen.md'),
-      require('../assets/markdown/Experiences/fr/Axopen.md'),
-      '4.5 months',
-      '2020',
-      'Mobiteach',
-      '14 Avril 2020',
-      require('../assets/img/Experiences/mobiteach.jpg')
-  )
-]
+const expList = ref(null);
+onMounted(() => {
+  axios.get('https://teoislearning-md-api.herokuapp.com/api/md').then((res) =>{
+    expList.value = res.data
+    console.log(expList)
+  });
+});
+
 </script>
 
 <style lang="scss" scoped>
