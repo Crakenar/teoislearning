@@ -10,7 +10,7 @@
         <h2 class="l3"><cite> <strong> {{ $t('PRESENTATION.CODENAME') }} : </strong></cite> Crakenar </h2>
         <h2 class="l4"><cite> <strong> {{ $t('PRESENTATION.OCCUPATION') }} : </strong></cite>
           {{ $t('PRESENTATION.OCCUPATION2') }}</h2>
-        <h2 class="l5"><cite> <strong> {{ $t('PRESENTATION.MAIL') }} : </strong></cite> teo.berguerre&commat;hotmail.com
+        <h2 class="l5"><cite> <strong> {{ $t('PRESENTATION.MAIL') }} : </strong></cite> teo.berguerre&commat;teoislearning.com
         </h2>
         <h2 class="l6"><cite> <strong> {{ $t('PRESENTATION.ADDRESS') }} : </strong></cite> 10 place des Jacobins 38130,
           Echirolles</h2>
@@ -69,24 +69,23 @@ const URL_PROFIL_PIC = require('../assets/img/Presentation/1655844360365.jpeg');
 const URL_DRESSEUR_PIC = require('../assets/img/Presentation/dresseur.gif');
 const URL_LEVEL = require('../assets/img/Presentation/icons/level-up.png');
 
-//TODO: double-clic necessary !!! fix it u dumb dumb => empecher de pouvoir reclicker ? #disable et cursor: not-allowed;
-//settimeinterval X
-//eventlistener X
 function attack(value) {
+  isAttack.value = false;
   store.changeSkill(value);
   isAttack.value = !isAttack.value;
-  //en fonction de la capacite, charger un json pour voir les possibilitees en fonction de "l'ennemi"
-  //load le text json ici
   capacityNumber.value = value;
-  console.log(value)
 }
-
+let x = 0;
 function endAnimationListener(event) {
   switch (event.type) {
     case "animationend":
-      //pb: se finit sur la premiere animation  if (dresser.classList.contains('slide-left') || dresser.classList.contains('loadBubble')) {
-      // isAttack = false;
-      // }
+        x = x + 1;
+        //if x === 2/4/6/8... means a full animation ended idk why if i put x declaration in animationlistener it reset every time
+        // bc I declaredthe eventListener only one time during the mount event
+      if (x%2 === 0){
+        console.log('final animation completed')
+        isAttack.value = false;
+      }
       break;
   }
 }

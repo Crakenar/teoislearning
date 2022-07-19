@@ -38,7 +38,8 @@ watch(() => {
   position: absolute;
   top: 50%;
   left: 25%;
-  border-radius: 40px;
+  border-radius: 30px;
+  padding: 5px;
 }
 
 
