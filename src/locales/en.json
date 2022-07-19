@@ -36,5 +36,11 @@
       "DATABASE" : "Database",
       "SOFTSKILL" : "Soft-Skill"
     }
+  },
+  "PROJECT": {
+    "PROGRESS": "In Progress",
+    "FINISHED": "Finished",
+    "NONE": "None",
+    "ALL": "All"
   }
 }

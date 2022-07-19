@@ -11,9 +11,9 @@
 </template>
 
 <script setup>
+//Ce composant pourrait etre un slot
 import {defineProps, ref, watch} from "vue";
 import {store} from "@/Store";
-//Get the script depending of the skill and tech selected
 import json from '@/assets/TechSkill/TechSkillconfig.json';
 const props = defineProps({
   isAttack: null
@@ -25,7 +25,6 @@ watch(() => {
   if (store.SkillSelected && store.TechSelected){
     const listTechList = json.find(item => item.idSkill === store.SkillSelected);
     bubbleText.value = listTechList.TechList.find(item => item.id === store.TechSelected)
-    console.log(bubbleText.value)
   }
 });
 
