@@ -180,6 +180,37 @@ $total: 8;
   .progress, .progress-bar {
     max-width: 70%!important;
   }
+}
 
+//992 - 1554
+@media screen and (min-width: 1320px) and (max-width: 1554px) {
+  .code-block {
+    max-width: 65%!important;
+  }
+  .i--1, .i--3 {
+    left: 10%!important;
+  }
+}
+@media screen and (min-width: 1100px) and (max-width: 1320px) {
+  .code-block {
+    max-width: 80%!important;
+  }
+  .i--1, .i--3 {
+    left: 5%!important;
+  }
+  .i--2, .i--4 {
+    left: 60%!important;
+  }
+}
 
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+  .code-block {
+    max-width: 90%!important;
+  }
+  .i--1, .i--3 {
+    left: 2%!important;
+  }
+  .i--2, .i--4 {
+    left: 55%!important;
+  }
 }
