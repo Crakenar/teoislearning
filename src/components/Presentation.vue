@@ -1,51 +1,53 @@
 <template>
-  <div class="row">
-    <div class="col flag-cat">
-      <img :src="URL_PROFIL_PIC" alt="profil pictures">
-    </div>
-    <div class="col ">
-      <!--Faire une box de code avec les couleurs si possibles pour dire mon nom prenom age addresse etc      -->
-      <div class="code-block">
-        <h2 class="l2"><cite> <strong> {{ $t('PRESENTATION.NAME') }} : </strong></cite> T&eacute;o Berguerre</h2>
-        <h2 class="l3"><cite> <strong> {{ $t('PRESENTATION.CODENAME') }} : </strong></cite> Crakenar </h2>
-        <h2 class="l4"><cite> <strong> {{ $t('PRESENTATION.OCCUPATION') }} : </strong></cite>
-          {{ $t('PRESENTATION.OCCUPATION2') }}</h2>
-        <h2 class="l5"><cite> <strong> {{ $t('PRESENTATION.MAIL') }} : </strong></cite> teo.berguerre&commat;teoislearning.com
-        </h2>
-        <h2 class="l6"><cite> <strong> {{ $t('PRESENTATION.ADDRESS') }} : </strong></cite> 10 place des Jacobins 38130,
-          Echirolles</h2>
-        <h2 class="l7"><cite> <strong> {{ $t('PRESENTATION.HOBBIES') }} : </strong></cite>
-          {{ $t('PRESENTATION.HOBBIES2') }}</h2>
-        <h2 class="l8"><cite> <strong> {{ $t('PRESENTATION.CHARACTERISTICS') }} : </strong></cite>
-          {{ $t('PRESENTATION.CHARACTERISTICS2') }}</h2>
-        <div class="row">
+  <div class="d-none d-lg-block">
+    <div class="row">
+      <div class="col flag-cat">
+        <img :src="URL_PROFIL_PIC" alt="profil pictures">
+      </div>
+      <div class="col">
+        <!--Faire une box de code avec les couleurs si possibles pour dire mon nom prenom age addresse etc      -->
+        <div class="code-block">
+          <h2 class="l2"><cite> <strong> {{ $t('PRESENTATION.NAME') }} : </strong></cite> T&eacute;o Berguerre</h2>
+          <h2 class="l3"><cite> <strong> {{ $t('PRESENTATION.CODENAME') }} : </strong></cite> Crakenar </h2>
+          <h2 class="l4"><cite> <strong> {{ $t('PRESENTATION.OCCUPATION') }} : </strong></cite>
+            {{ $t('PRESENTATION.OCCUPATION2') }}</h2>
+          <h2 class="l5"><cite> <strong> {{ $t('PRESENTATION.MAIL') }} : </strong></cite> teo.berguerre&commat;teoislearning.com
+          </h2>
+          <h2 class="l6"><cite> <strong> {{ $t('PRESENTATION.ADDRESS') }} : </strong></cite> 10 place des Jacobins 38130,
+            Echirolles</h2>
+          <h2 class="l7"><cite> <strong> {{ $t('PRESENTATION.HOBBIES') }} : </strong></cite>
+            {{ $t('PRESENTATION.HOBBIES2') }}</h2>
+          <h2 class="l8"><cite> <strong> {{ $t('PRESENTATION.CHARACTERISTICS') }} : </strong></cite>
+            {{ $t('PRESENTATION.CHARACTERISTICS2') }}</h2>
+          <div class="row">
+          </div>
+          <i></i>
         </div>
-        <i></i>
       </div>
     </div>
-  </div>
-  <div class="row" style="margin-top: 200px">
-    <div class="col">
-      <div id="dresser" class="col dresseur" :class="{'loadBubble slide-left': isAttack}">
-        <img :src="URL_DRESSEUR_PIC" alt="icon of an angular image">
+    <div class="row" style="margin-top: 200px">
+      <div class="col">
+        <div id="dresser" class="col dresseur" :class="{'loadBubble slide-left': isAttack}">
+          <img :src="URL_DRESSEUR_PIC" alt="icon of an angular image">
+        </div>
+        <Bubble :is-attack="isAttack"/>
+        <div class="imgLevel" data-bs-toggle="tooltip" title="how many years of experience since my first internship">
+          <img :src="URL_LEVEL" alt="free icon of a level by Freepik">
+          <span>{{ yearExp }}</span>
+        </div>
+        <div class="progress" style="margin: 10px;">
+          <div :style="stringFinal" class="progress-bar"></div>
+        </div>
+        <div class="code-block2 row attack">
+          <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 1}" @click="attack(1)"><i class="i--1"></i>{{$t('ATTACKS.MASTERY')}}</div>
+          <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 2}" @click="attack(2)"><i class="i--2"></i>{{$t('ATTACKS.LEARNINGCURVE')}}</div>
+          <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 3}" @click="attack(3)"><i class="i--3"></i>{{$t('ATTACKS.INTEREST')}}</div>
+          <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 4}" @click="attack(4)"><i class="i--4"></i>{{$t('ATTACKS.ESCAPE')}}</div>
+        </div>
       </div>
-      <Bubble :is-attack="isAttack"/>
-      <div class="imgLevel" data-bs-toggle="tooltip" title="how many years of experience since my first internship">
-        <img :src="URL_LEVEL" alt="free icon of a level by Freepik">
-        <span>{{ yearExp }}</span>
+      <div class="col">
+        <Carousel/>
       </div>
-      <div class="progress" style="margin: 10px;">
-        <div :style="stringFinal" class="progress-bar"></div>
-      </div>
-      <div class="code-block2 row attack">
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 1}" @click="attack(1)"><i class="i--1"></i>{{$t('ATTACKS.MASTERY')}}</div>
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 2}" @click="attack(2)"><i class="i--2"></i>{{$t('ATTACKS.LEARNINGCURVE')}}</div>
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 3}" @click="attack(3)"><i class="i--3"></i>{{$t('ATTACKS.INTEREST')}}</div>
-        <div class="col-lg-6 pt-lg-3 border" :class="{'forbidden': capacityNumber === 4}" @click="attack(4)"><i class="i--4"></i>{{$t('ATTACKS.ESCAPE')}}</div>
-      </div>
-    </div>
-    <div class="col">
-      <Carousel/>
     </div>
   </div>
 </template>

@@ -6,17 +6,15 @@
       </div>
       <div class="buttons">
         <a class="btn btn-info m-3 bounce-in-left" href="https://github.com/Crakenar" target="_blank">{{ $t('PROFILE.MYGITHUB') }}</a>
-        <a class="btn btn-info m-3 bounce-in-right" download
-           href="../assets/markdown/Experiences/CV de Teo Berguerre.pdf">{{ $t('PROFILE.MYRESUME') }}</a>
+        <a  v-if="$i18n.locale === 'FR'" href="CVTeoBerguerreFR.pdf" download class="btn btn-info m-3 bounce-in-right">{{ $t('PROFILE.MYRESUME') }}</a>
+        <a  v-else href="CVTeoBERGUERRE2022EN.pdf" download class="btn btn-info m-3 bounce-in-right">{{ $t('PROFILE.MYRESUME') }}</a>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "HomePage"
-}
+<script setup>
+
 </script>
 
 <style lang="scss" scoped>

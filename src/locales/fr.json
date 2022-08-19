@@ -22,7 +22,9 @@
     "CHARACTERISTICS": "Traits Characteristiques",
     "CHARACTERISTICS2": "Calme, Attentif, Curieux, Franc, Rationnel",
     "FEWWORDS": "En quelques mots",
-    "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
+    "ABOUTME" : "A propos de moi",
+    "TOOLS" : "OUTILS",
+    "FEWWORDS2": "Jeune développeur web, je suis à la recherche d'une experience me permettant de travailler dans un environnement qui fera évoluer mes compétences techniques et humaines. Je suis pour l'instant centré sur ma montée en compétences sur des projets personnels utilisants Vuejs .Net et la découverte de Nodejs",
   },
   "ATTACKS": {
     "MASTERY": "Maitrise de la technologie",

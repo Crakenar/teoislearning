@@ -22,7 +22,9 @@
     "CHARACTERISTICS": "Characteristics",
     "CHARACTERISTICS2": "Calm, Attentive, Curious, Franc, Rational ",
     "FEWWORDS": "In few words",
-    "FEWWORDS2": "Jeune developpeur spodfhjnspofdi sdofhn spodfnjspdofns opdnf lorem spodfihspodfih spdoifkhspodifhuspodfhsdfi hsdpofih spdoifh"
+    "ABOUTME" : "About Me",
+    "TOOLS" : "TOOLS",
+    "FEWWORDS2": "Young web developer, I am looking for an experience allowing me to work in an environment that will develop my technical skills and let me experience new things. I am currently focused on improving my development skills such as Vuejs, .Net and NodeJS with personal projects."
 
   },
   "ATTACKS": {
