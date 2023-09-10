@@ -1,0 +1,29 @@
+.skill-title {
+  color: rgba(255, 255, 255, 255);
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  letter-spacing: -0.05rem;
+  padding-bottom: 12px;
+}
+
+.skill-chart-parent {
+  width: 100%;
+}
+
+.skill-meter {    
+    background-color: aqua;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    /* min-width: 100px; */
+    padding: 6px 15px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.6);
+    font-family: 'cascadia', 'monospace';
+}
+
+.skill-metric-value {
+    float: right;
+    font-weight: bold;
+}
