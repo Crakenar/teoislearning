@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /login
+Disallow: /register
+User-agent: *
+Allow: /
+
+Sitemap: https://teoislearning.com/sitemap.xml
