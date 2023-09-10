@@ -2,7 +2,7 @@ html {
   font-family: "cascadia", "monospace" !important;
   letter-spacing: 1px;
   font-size: 1.8rem;
-  background: url("/assets/header.png") no-repeat center center fixed;
+  background: url("/assets/header.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
