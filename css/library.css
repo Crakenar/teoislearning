@@ -6,8 +6,20 @@
   justify-content: center;
 }
 
+
 .justify-between { 
   justify-content: space-between;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 
 .w-100 {

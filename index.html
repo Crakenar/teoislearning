@@ -65,8 +65,21 @@
         </p> -->
       </section>
       <hr />
-      <section>
-        <div class="tab flex justify-between">
+      <section>     
+        <div class="dropdown" tabindex="0">
+          <button class="dropdown-btn" aria-haspopup="menu">
+            <span>Menu</span>
+            <span class="arrow"></span>
+          </button>
+          <ul class="dropdown-content" role="menu">
+            <li onclick="changeTabs(event, 'projects')" style="--delay: 1;"><a href="#">Projects</a></li>
+            <li onclick="changeTabs(event, 'education')" style="--delay: 2;"><a href="#">Education</a></li>
+            <li onclick="changeTabs(event, 'work')" style="--delay: 3;"><a href="#">Work</a></li>
+            <li onclick="changeTabs(event, 'skills')" style="--delay: 4;"><a href="#">Skills</a></li>
+            <li onclick="changeTabs(event, 'journey')" style="--delay: 4;"><a href="#">My Journey</a></li>
+          </ul>
+        </div>
+        <div class="tab flex-container justify-between">
           <button
             class="btn-T w-100 animated-button victoria-one tabMainLinks"
             onclick="changeTabs(event, 'projects')"
