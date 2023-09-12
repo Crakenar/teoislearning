@@ -6,6 +6,14 @@
   justify-content: center;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
 
 .justify-between { 
   justify-content: space-between;

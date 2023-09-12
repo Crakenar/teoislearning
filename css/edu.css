@@ -1,0 +1,14 @@
+.edu-title, .we-title {
+    color: rgba(255, 255, 255, 255);
+    font-family: "Major Mono Display", monospace;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  
+  .we-year { 
+    font-family: 'Major Mono Display', monospace;
+    font-size: 0.7rem;
+    /* padding-top: 10px; */
+    padding-bottom: 0px;
+  }

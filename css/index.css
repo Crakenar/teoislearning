@@ -160,50 +160,6 @@ button {
   border-top: none;
 }
 
-/* PROJECTS SECTION */
-#project-button-section {
-}
-.proj-btn {
-  border: 2px solid white;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform 0.3s;
-  max-width: 10vh;
-  min-width: 10vh;
-  min-height: 10vh;
-  max-height: 10vh;
-  vertical-align: middle;
-}
-
-.project-images {
-  width: 70px;
-  height: 70px;
-  border: 1px solid white; /* lmao its bugged but its fuunny */
-}
-
-.project-images > img,
-.project-images > a > img {
-  height: inherit;
-  border-radius: inherit;
-}
-
-/* EDUCATION SECTION */
-
-.edu-title, .we-title {
-  color: rgba(255, 255, 255, 255);
-  font-family: "Major Mono Display", monospace;
-  font-size: 1rem;
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.we-year { 
-  font-family: 'Major Mono Display', monospace;
-  font-size: 0.7rem;
-  /* padding-top: 10px; */
-  padding-bottom: 0px;
-}
-
 #footer {
   clear: both;
   position: relative;

@@ -1,5 +1,4 @@
 .proj-btn {
-    border: 2px solid white;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s;
@@ -13,7 +12,6 @@
   .project-images {
     width: 70px;
     height: 70px;
-    border: 1px solid white; /* lmao its bugged but its fuunny */
   }
   
   .project-images > img,
