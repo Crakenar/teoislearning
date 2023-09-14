@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeoIsLearning</title>
-    <meta name="description" content="Author: Teo Berguerre, 
+    <meta
+      name="description"
+      content="Author: Teo Berguerre, 
     TeoisLearning is a portfolio website for Teo Berguerre showcasing my projects and skills as a Software Engineering.
     Created in 2019 I continued to develop my teoislearning.com to this day.
-    ">
+    "
+    />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/library.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/skills.css" />
     <link rel="stylesheet" href="css/we.css" />
+    <link rel="stylesheet" href="css/edu.css" />
     <script
       src="https://kit.fontawesome.com/f4d3c7b01a.js"
       crossorigin="anonymous"
@@ -22,7 +26,7 @@
   </head>
   <body onload="displayAge();">
     <div class="container">
-      <h1>Teo Berguerre</h1>
+      <h1>TeoIsLearning</h1>
       <img
         src="/assets/me.webp"
         class="profile-img"
@@ -46,9 +50,10 @@
           </a>
         </div>
       </section>
-      <hr />
+      <p class="about-me">Teo Berguerre</p>
+      <hr class="hr-80"/>
       <section>
-        <p class="about-me">
+        <p class="about-me text-section center">
           Hello! I'm Teo, a passionate <span id="age">?</span>-year-old web
           developer. I enjoy helping colleagues, staying curious, and
           continually learning. I'm dedicated to crafting exceptional web
@@ -65,18 +70,28 @@
         </p> -->
       </section>
       <hr />
-      <section>     
+      <section>
         <div class="dropdown" tabindex="0">
           <button class="dropdown-btn" aria-haspopup="menu">
             <span>Menu</span>
             <span class="arrow"></span>
           </button>
           <ul class="dropdown-content" role="menu">
-            <li onclick="changeTabs(event, 'projects')" style="--delay: 1;"><a href="#">Projects</a></li>
-            <li onclick="changeTabs(event, 'education')" style="--delay: 2;"><a href="#">Education</a></li>
-            <li onclick="changeTabs(event, 'work')" style="--delay: 3;"><a href="#">Work</a></li>
-            <li onclick="changeTabs(event, 'skills')" style="--delay: 4;"><a href="#">Skills</a></li>
-            <li onclick="changeTabs(event, 'journey')" style="--delay: 4;"><a href="#">My Journey</a></li>
+            <li onclick="changeTabs(event, 'projects')" style="--delay: 1">
+              <a href="#">Projects</a>
+            </li>
+            <li onclick="changeTabs(event, 'education')" style="--delay: 2">
+              <a href="#">Education</a>
+            </li>
+            <li onclick="changeTabs(event, 'work')" style="--delay: 3">
+              <a href="#">Work</a>
+            </li>
+            <li onclick="changeTabs(event, 'skills')" style="--delay: 4">
+              <a href="#">Skills</a>
+            </li>
+            <li onclick="changeTabs(event, 'journey')" style="--delay: 4">
+              <a href="#">My Journey</a>
+            </li>
           </ul>
         </div>
         <div class="tab flex-container justify-between">
@@ -131,7 +146,11 @@
               </a>
             </div>
             <div class="project-images rounded mx-4 p-10">
-              <a href="https://github.com/Crakenar/MusicForPlay" target="_blank" class="project-images rounded">
+              <a
+                href="https://github.com/Crakenar/MusicForPlay"
+                target="_blank"
+                class="project-images rounded"
+              >
                 <img
                   src="/assets/Projects/MusicForPlay.webp"
                   alt="image showing someone playing some music in reference to the project MusicForPlay"
@@ -139,7 +158,11 @@
               </a>
             </div>
             <div class="project-images rounded mx-4 p-10">
-              <a href="https://github.com/Crakenar/teoislearning" target="_blank" class="project-images rounded">
+              <a
+                href="https://github.com/Crakenar/teoislearning"
+                target="_blank"
+                class="project-images rounded"
+              >
                 <img
                   src="/assets/Projects/teoislearning3.png"
                   alt="image showing the icon of the website teoislearning.com"
@@ -147,7 +170,11 @@
               </a>
             </div>
             <div class="project-images rounded mx-4 p-10">
-              <a href="https://github.com/Crakenar/teoislearning-md" target="_blank" class="project-images rounded">
+              <a
+                href="https://github.com/Crakenar/teoislearning-md"
+                target="_blank"
+                class="project-images rounded"
+              >
                 <img
                   src="/assets/Projects/markdown.webp"
                   alt="image showing someone playing some music in reference to the project MusicForPlay"
@@ -155,7 +182,11 @@
               </a>
             </div>
             <div class="project-images rounded mx-4 p-10">
-              <a href="https://github.com/Crakenar/gambling-bud" target="_blank" class="project-images rounded">
+              <a
+                href="https://github.com/Crakenar/gambling-bud"
+                target="_blank"
+                class="project-images rounded"
+              >
                 <img
                   src="/assets/Projects/gambling-2.webp"
                   alt="image showing cards and tokens related to gamling"
@@ -163,7 +194,11 @@
               </a>
             </div>
             <div class="project-images rounded mx-4 p-10">
-              <a href="https://github.com/Crakenar" target="_blank" class="project-images rounded">
+              <a
+                href="https://github.com/Crakenar"
+                target="_blank"
+                class="project-images rounded"
+              >
                 <img
                   src="/assets/Projects/flappy_bird.webp"
                   alt="image showing someone playing some music in reference to the project MusicForPlay"
@@ -185,7 +220,7 @@
             </div>
           </div>
           <br />
-          <hr />
+          <hr class="hr-80" />
           <div class="edu">
             <div class="edu-title">
               <p>Professional Bachelor's in web development</p>
@@ -200,7 +235,7 @@
             </div>
           </div>
           <br />
-          <hr />
+          <hr class="hr-80" />
           <div class="edu">
             <div class="edu-title">
               <p>Technology University Diploma in computer science</p>
@@ -248,7 +283,7 @@
             </div>
           </div>
           <br />
-          <hr />
+          <hr class="hr-80"/>
           <div class="we">
             <div class="we-title">
               <p>Remote Developer, AM-Creation in France</p>
@@ -269,7 +304,7 @@
             </div>
           </div>
           <br />
-          <hr />
+          <hr class="hr-80"/>
           <div class="we">
             <div class="we-title">
               <p>Developer Analyst, Axopen in France</p>
@@ -305,7 +340,7 @@
             </div>
           </div>
           <br />
-          <hr />
+          <hr class="hr-80"/>
           <div class="we">
             <div class="we-title">
               <p>Work-study developer, Trixell in France</p>
@@ -355,7 +390,7 @@
             </div>
           </div>
           <br />
-          <hr />
+          <hr class="hr-80"/>
           <div class="we">
             <div class="we-title">
               <p>Intership as a Full-Stack Developer, Mobiteach in France</p>
