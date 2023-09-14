@@ -1,3 +1,14 @@
+window.onload = function() {
+  displayAge();
+  var buttons = document.getElementsByClassName('myFakeLinks');
+  for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(event){
+        event.preventDefault();
+      });
+  };
+};
+
+
 function changeTabs(event, tabName) {
   const tabContents = document.querySelectorAll(".tabcontent");
   tabContents.forEach((tab) => {
@@ -17,6 +28,8 @@ function displayAge() {
   const year = date.getFullYear();
   document.getElementById("age").innerHTML = year - 1999;
 }
+
+
 
 window.addEventListener("DOMContentLoaded", (event) => {
   const dropdownBtn = document.querySelector(".dropdown-btn");

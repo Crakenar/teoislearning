@@ -18,15 +18,11 @@
     <link rel="stylesheet" href="css/skills.css" />
     <link rel="stylesheet" href="css/we.css" />
     <link rel="stylesheet" href="css/edu.css" />
-    <script
-      src="https://kit.fontawesome.com/f4d3c7b01a.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="index.js"></script>
   </head>
-  <body onload="displayAge();">
+  <body>
     <div class="container">
-      <h1>TeoIsLearning</h1>
+      <h1 class="kinda3d">Teo is Learning</h1>
       <img
         src="/assets/me.webp"
         class="profile-img"
@@ -34,19 +30,33 @@
         width="200"
       />
       <section class="flex">
-        <div class="mx-4">
+        <div class="mx-8">
           <a href="mailto:teoislearning.com" target="_blank">
-            <i class="fa-regular fa-envelope" style="color: white"></i>
+            <svg width="45" height="45" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M44 24V9H24H4V24V39H24" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M31 36L36 40L44 30" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 9L24 24L44 9" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </a>
         </div>
-        <div class="mx-4">
-          <a href="https://github.com/crakenar" target="_blank">
-            <i class="fa-brands fa-github" style="color: white"></i>
+        <div class="mx-8">
+          <a href="https://github.com/crakenar" class="icon-github" target="_blank">
+            <svg viewBox="71 71 370 370" width="45" height="45">
+              <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+            </svg>
+            <!--[if lt IE 9]><em>GitHub</em><![endif]-->          
           </a>
         </div>
-        <div class="mx-4">
-          <a href="https://www.linkedin.com/in/teo-berguerre/" target="_blank">
-            <i class="fa-brands fa-linkedin" style="color: white"></i>
+        <div class="mx-8">
+          <a href="https://frontendmasters.com/u/Crakenar/" target="_blank">
+            <img src="/assets/icons/frontendmaster.webp" alt="image that link to my frontendmaster profile" width="55">
+          </a>
+        </div>
+        <div class="mx-8">
+          <a href="https://www.linkedin.com/in/teo-berguerre/" class="icon" target="_blank" title="Linkedin Link">
+            <svg viewBox="0 0 512 512"  width="45" height="45" fill="#007BB6">
+              <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+            </svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
           </a>
         </div>
       </section>
@@ -78,49 +88,49 @@
           </button>
           <ul class="dropdown-content" role="menu">
             <li onclick="changeTabs(event, 'projects')" style="--delay: 1">
-              <a href="#">Projects</a>
+              <a href="#" class="myFakeLinks">Projects</a>
             </li>
             <li onclick="changeTabs(event, 'education')" style="--delay: 2">
-              <a href="#">Education</a>
+              <a href="#" class="myFakeLinks">Education</a>
             </li>
             <li onclick="changeTabs(event, 'work')" style="--delay: 3">
-              <a href="#">Work</a>
+              <a href="#" class="myFakeLinks">Work</a>
             </li>
             <li onclick="changeTabs(event, 'skills')" style="--delay: 4">
-              <a href="#">Skills</a>
+              <a href="#" class="myFakeLinks">Skills</a>
             </li>
             <li onclick="changeTabs(event, 'journey')" style="--delay: 4">
-              <a href="#">My Journey</a>
+              <a href="#" class="myFakeLinks">My Journey</a>
             </li>
           </ul>
         </div>
         <div class="tab flex-container justify-between">
           <button
-            class="btn-T w-100 animated-button victoria-one tabMainLinks"
+            class="btn-T w-100 animated-button victoria-one tabMainLinks myFakeLinks"
             onclick="changeTabs(event, 'projects')"
           >
             Projects
           </button>
           <button
-            class="btn-T w-100 animated-button victoria-one tabMainLinks"
+            class="btn-T w-100 animated-button victoria-one tabMainLinks myFakeLinks"
             onclick="changeTabs(event, 'education')"
           >
             Education
           </button>
           <button
-            class="btn-T w-100 animated-button victoria-one tabMainLinks"
+            class="btn-T w-100 animated-button victoria-one tabMainLinks myFakeLinks"
             onclick="changeTabs(event, 'work')"
           >
             Work
           </button>
           <button
-            class="btn-T w-100 animated-button victoria-one tabMainLinks"
+            class="btn-T w-100 animated-button victoria-one tabMainLinks myFakeLinks"
             onclick="changeTabs(event, 'skills')"
           >
             Skills
           </button>
           <button
-            class="btn-T w-100 animated-button victoria-one tabMainLinks"
+            class="btn-T w-100 animated-button victoria-one tabMainLinks myFakeLinks"
             onclick="changeTabs(event, 'journey')"
           >
             My Journey
@@ -159,7 +169,7 @@
             </div>
             <div class="project-images rounded mx-4 p-10">
               <a
-                href="https://github.com/Crakenar/teoislearning"
+                href="https://github.com/Crakenar/teoislearning/tree/v3"
                 target="_blank"
                 class="project-images rounded"
               >
@@ -263,18 +273,18 @@
               in the development and maintenance of key features for the
               Feel-mining website, spanning the back-office, API, and website.
               <br />
-              I also took on the challenge of optimizing scheduled tasks,
-              enhancing Eloquent query performance, and executing a smooth
+              I also took on the challenge of <strong>optimizing scheduled tasks </strong>,
+              enhancing Eloquent <strong>query performance</strong>, and executing a smooth
               migration of the front-end library from Vue Bootstrap/Bootstrap to
               Vuetify.
               <br />
               <br />
               My contributions extended beyond coding, as I actively
-              participated in task planning. In addition, I had a similar
+              participated in <strong>task planning</strong>. In addition, I had a similar
               hands-on involvement in the Wigl application, where I worked on
               mobile and back-office features, as well as the API.
               <br />
-              Task planning was another aspect where I made valuable
+              <strong>Task planning</strong> was another aspect where I made valuable
               contributions.
               <br />
               My skills encompass Vue.js, Laravel, Vuetify, JIRA for the
@@ -293,14 +303,14 @@
             </div>
             <div class="we-description">
               I was tasked with application development and ongoing maintenance,
-              working with .NetCore and Vue.js technologies.
+              working with <strong>.NetCore</strong> and <strong>Vue.js</strong> technologies.
               <br />
-              This project, which served Enedis, required skills in .NetCore
-              MVC, SQL, and involved responsibilities such as keeping the
+              This project, which served Enedis, required skills in <strong>.NetCore
+                MVC, SQL,</strong> and involved responsibilities such as keeping the
               program running smoothly.
               <br />
-              Additionally, I utilized project management tools like Jira and
-              followed Agile methodologies for efficient progress.
+              Additionally, I utilized project management tools like <strong>Jira</strong> and
+              followed <strong>Agile</strong> methodologies for efficient progress.
             </div>
           </div>
           <br />
@@ -316,26 +326,26 @@
               During my time at Axopen, I've been involved in diverse projects
               that showcase my versatility and expertise in web development.
               <br />
-              One notable project involved the modernization of a website, where
-              I utilized technologies like Gatsby, Strapi, React, and GraphQL to
+              One notable project involved the <strong>modernization</strong> of a website, where
+              I utilized technologies like <strong>Gatsby</strong>, <strong>Strapi</strong>, <strong>React</strong>, and <strong>GraphQL</strong> to
               transform its functionality and user experience, bringing it up to
               contemporary standards.
               <br />
               <br />
               Additionally, I undertook the development of an application
-              tailored specifically for mining machines. Leveraging VueJS and
+              tailored specifically for <strong>mining machines</strong>. <strong>Leveraging VueJS</strong> and
               SCSS, I crafted an intuitive and efficient interface to meet the
               unique requirements of this domain.
               <br />
               <br />
               Furthermore, I spearheaded the creation of a website dedicated to
-              managing virtual machines and conducting audits. This endeavor saw
-              me employ technologies such as Angular 2+, Spring Boot, and SCS to
+              <strong> managing virtual machines</strong> and conducting audits. This endeavor saw
+              me employ technologies such as <strong>Angular 2+</strong>, <strong>Spring Boot</strong>, and SCSS to
               ensure seamless functionality and top-notch performance.
               <br />
               <br />
               These experiences have enriched my skill set and provided me with
-              a solid foundation in web development, allowing me to excel in a
+              a <strong>solid foundation</strong> in web development, allowing me to excel in a
               wide range of projects and domains.
             </div>
           </div>
@@ -361,19 +371,19 @@
                   to create a detailed project plan, following an agile
                   methodology to ensure efficient task management.
                 </li>
-                <li>I set up the database for the Headless CMS OrchardCore.</li>
-                <li>I configured the IIS server for deployment.</li>
+                <li>I set up the database for the <strong>Headless CMS</strong> OrchardCore.</li>
+                <li>I configured the <strong>IIS server</strong> for deployment.</li>
                 <li>
-                  I established a Git workflow with basic checks for critical
+                  I established a <strong>Git workflow</strong> with basic checks for critical
                   tests.
                 </li>
-                <li>I dockerized the database to facilitate remote work.</li>
+                <li>I <strong>dockerized</strong> the database to facilitate remote work.</li>
                 <li>
-                  I leveraged .Net Core MVC for development, incorporating Razor
+                  I leveraged <strong>.Net Core MVC</strong> for development, incorporating Razor
                   pages, Tag Helpers, and Dependency Injection.
                 </li>
                 <li>
-                  I made use of Entity Framework and LinQ for the backend.
+                  I made use of <strong>Entity Framework</strong> and LinQ for the backend.
                 </li>
                 <li>
                   I undertook the development of an Organizational Chart
