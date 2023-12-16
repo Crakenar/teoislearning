@@ -20,6 +20,34 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(157,15,44,1) 100%
   -o-background-size: cover;
   background-size: cover; */
   color: white !important;
+
+
+  /* Scrollbar */
+  /* FIREFOX */
+  scrollbar-width: normal;
+  scrollbar-color: linear-gradient(
+    90deg,
+    rgba(5, 2, 51, 1) 0%,
+    rgba(76, 0, 0, 1) 100%
+  );
+}
+
+/* Scrollbar Chrome */
+html::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #a0328e; /* Couleur de la barre de défilement */
+  border-radius: 6px; /* Coins arrondis */
+  border: 3px solid #4d0033; /* Bordure */
+}
+
+html::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-button {
+  display: none; /* Masquer la flèche de la barre de défilement */
 }
 body {
   /* text-shadow: 0 0 3px; */
@@ -49,6 +77,7 @@ h1 {
     1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
     1px 30px 60px rgba(16, 16, 16, 0.4);
 }
+
 .container {
   width: 70%;
   padding: 0;
