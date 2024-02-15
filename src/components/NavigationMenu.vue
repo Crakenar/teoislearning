@@ -3,6 +3,29 @@ import { ref } from "vue";
 
 const menuOpen = ref(false);
 
+const menuList = [
+  {
+    path: "/",
+    label: "Home",
+  },
+  {
+    path: "/projects",
+    label: "Projects",
+  },
+  {
+    path: "/education",
+    label: "Education",
+  },
+  {
+    path: "/work",
+    label: "Work",
+  },
+  {
+    path: "/skills",
+    label: "Skills",
+  },
+];
+
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
@@ -38,28 +61,11 @@ const toggleMenu = () => {
           class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0"
         >
           <router-link
-            :to="{ path: '/' }"
+            v-for="item in menuList"
+            :to="{ path: item.path }"
             class="menu-item"
-            :class="{ 'menu-item-active': $route.path === '/' }"
-            >Home
-          </router-link>
-          <router-link
-            :to="{ path: '/about' }"
-            class="menu-item"
-            :class="{ 'menu-item-active': $route.path === '/about' }"
-            >About
-          </router-link>
-          <router-link
-            :to="{ path: '/services' }"
-            class="menu-item"
-            :class="{ 'menu-item-active': $route.path === '/services' }"
-            >Services
-          </router-link>
-          <router-link
-            :to="{ path: '/contact' }"
-            class="menu-item"
-            :class="{ 'menu-item-active': $route.path === '/contact' }"
-            >Contact
+            :class="{ 'menu-item-active': $route.path === item.path }"
+            >{{ item.label }}
           </router-link>
         </div>
       </nav>
