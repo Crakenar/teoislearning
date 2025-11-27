@@ -1,5 +1,7 @@
 import { Terminal, Code2, Database, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profileImage from "@/assets/me.webp";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -12,6 +14,11 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10 animate-fade-in">
         <div className="max-w-4xl mx-auto text-center space-y-8">
+          <Avatar className="w-40 h-40 mx-auto mb-6 terminal-border absolute left-0 top-0 invisible lg:visible">
+            <AvatarImage src={profileImage} alt="Teo Berguerre" />
+            <AvatarFallback className="bg-card text-primary text-4xl font-mono">TB</AvatarFallback>
+          </Avatar>
+
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-card/50 backdrop-blur-sm mb-4">
             <Terminal className="w-4 h-4 text-primary animate-glow-pulse" />
             <span className="text-sm text-muted-foreground font-mono">System.Status.Online</span>
@@ -92,7 +99,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-secondary animate-glow-pulse" />
-              <span>.NET Core</span>
+              <span>Go</span>
             </div>
           </div>
         </div>

@@ -8,12 +8,16 @@ const experiences = [
     location: "France",
     period: "September 2022 - Present",
     description: [
-      "Played a pivotal role in the development and maintenance of key features for the Feel-mining website, spanning the back-office, API, and website.",
+      "Key contributor to the backend API of the WIGL mobile application.",
+      "Designed and implemented a robust queue architecture with standardized job workflows.",
+      "Established and deployed best-practice standards for external API error handling.",
+      "Strong focus on improving existing code through systematic refactoring and performance optimization.",
       "Optimized scheduled tasks and enhanced Eloquent query performance.",
+      "Played a pivotal role in the development and maintenance of key features for the Feel-mining website and Othila web app, spanning the back-office, API, and website.",
       "Executed a smooth migration of the front-end library from Vue Bootstrap/Bootstrap to Vuetify.",
       "Actively participated in task planning and had hands-on involvement in the Wigl application, working on mobile and back-office features, as well as the API.",
     ],
-    skills: ["Vue.js", "Laravel", "Vuetify", "JIRA", "React Native", "Tailwind CSS"],
+    skills: ["Laravel",  "Vue.js", "React Native", "Nova", "Vuetify", "JIRA", "Tailwind CSS"],
   },
   {
     title: "Remote Developer",
