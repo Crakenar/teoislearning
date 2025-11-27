@@ -5,7 +5,7 @@ const education = [
   {
     degree: "Master's degree in Software Engineering",
     institution: "University of Grenoble Alpes",
-    period: "In Progress",
+    period: "Planned",
     description: "Pursuing a Master's degree in Software Engineering through a work-study program, focusing on advanced software development practices and system architecture.",
   },
   {
