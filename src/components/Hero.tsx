@@ -91,7 +91,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-secondary animate-glow-pulse" />
-              <span>Vue.js</span>
+              <span>Vue</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
@@ -99,7 +99,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-secondary animate-glow-pulse" />
-              <span>React Native</span>
+              <span>React</span>
             </div>
           </div>
         </div>
