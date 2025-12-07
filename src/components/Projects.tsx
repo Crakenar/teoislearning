@@ -12,9 +12,10 @@ import prelude from "@/assets/Projects/prelude.jpg";
 import frenchSalaryCalculatorImg from "@/assets/Projects/frenchSalaryCalculator.jpg";
 import jsonTrad from "@/assets/Projects/jsonTrad.jpg";
 import asuraBlock from "@/assets/Projects/asurablock.jpg";
+import leclercScraper from "@/assets/Projects/leclercScraper.png";
 
 const projects = [
-    {
+  {
     title: "Prelude SDK",
     description: "PHP SDK to allow simple Prelude (SMS Service) Implementation",
     image: prelude,
@@ -41,47 +42,56 @@ const projects = [
     tech: ["React / Vue", "Web"],
     status: "Live Production",
     stats: [
-      { label: "Daily Visitors", value: "+2.5k" }
+      { label: "Daily Visitors", value: "70+" }
     ]
   },
   {
-  title: "Empty Trad Checker",
-  description: "Rust webserver to upload two JSON files and detect missing or differing translation keys.",
-  image: jsonTrad,
-  imageAlt: "Rust webserver comparing translation JSON keys",
-  link: "https://github.com/Crakenar/EmptyTradKeys",
-  tech: ["Rust", "Rocket Framework"],
-  status: "Production Ready",
-},
-{
-  title: "Manga Block Ad Extension",
-  description: "Chrome extension blocking intrusive ads on Asurascan.com, used daily by ~30 users.",
-  image: asuraBlock,
-  imageAlt: "Browser extension blocking ads on Asurascan",
-  link: "https://github.com/Crakenar/MangaBlockAddExtension",
-  tech: ["JavaScript", "Chrome Extension"],
-  status: "Live Production",
-  stats: [
-    { label: "Daily Users", value: "30+" }
-  ]
-},
-{
-  title: "French Salary Calculator",
-  description: "Simple website to convert French gross salary to net, used by more than 3k daily visitors.",
-  image: frenchSalaryCalculatorImg,
-  imageAlt: "French salary calculation website interface",
-  link: "https://github.com/Crakenar/FrenchSalaryCalculator",
-  tech: ["HTML", "JavaScript", "Tailwind"],
-  status: "Live Production",
-  stats: [
-    { label: "Daily Visitors", value: "3k+" }
-  ]
-},
+    title: "Empty Trad Checker",
+    description: "Rust webserver to upload two JSON files and detect missing or differing translation keys.",
+    image: jsonTrad,
+    imageAlt: "Rust webserver comparing translation JSON keys",
+    link: "https://github.com/Crakenar/EmptyTradKeys",
+    tech: ["Rust", "Rocket Framework"],
+    status: "Production Ready",
+  },
+  {
+    title: "Manga Block Ad Extension",
+    description: "Chrome extension blocking intrusive ads on Asurascan.com, used daily by ~30 users.",
+    image: asuraBlock,
+    imageAlt: "Browser extension blocking ads on Asurascan",
+    link: "https://github.com/Crakenar/MangaBlockAddExtension",
+    tech: ["JavaScript", "Chrome Extension"],
+    status: "Live Production",
+    stats: [
+      { label: "Daily Users", value: "30+" }
+    ]
+  },
+  {
+    title: "French Salary Calculator",
+    description: "Simple website to convert French gross salary to net, used by more than 3k daily visitors.",
+    image: frenchSalaryCalculatorImg,
+    imageAlt: "French salary calculation website interface",
+    link: "https://github.com/Crakenar/FrenchSalaryCalculator",
+    tech: ["HTML", "JavaScript", "Tailwind"],
+    status: "Live Production",
+    stats: [
+      { label: "Daily Visitors", value: "3k+" }
+    ]
+  },
+    {
+    title: "Leclerc Web Scraper",
+    description: "Web scraper to get all the products and price of Leclerc exported using CSV.",
+    image: leclercScraper,
+    imageAlt: "Leclerc Web Scraper",
+    link: "https://github.com/Crakenar/LeclercFoodWebScratcherApp",
+    tech: ["Vue", "Go"],
+    status: "Personnal Use",
+  },
 ];
 type Project = typeof projects[number];
 
 const Projects = () => {
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section id="projects" className="py-20 relative">
@@ -96,7 +106,7 @@ const Projects = () => {
               // Showcase of technical implementations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-3xl mx-auto">
             {projects.map((project, index) => (
               <div
@@ -112,14 +122,14 @@ const Projects = () => {
                       className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                   </div>
-                  
+
                   <div className="p-2">
                     <div className="flex items-center justify-between mb-1">
                       <h3 className="text-xs font-bold text-gradient font-mono truncate">
                         {project.title}
                       </h3>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-1">
                       {project.tech.slice(0, 2).map((tech, techIndex) => (
                         <span
@@ -150,7 +160,7 @@ const Projects = () => {
                   className="max-w-full max-h-64 object-contain"
                 />
               </div>
-              
+
               <div className="md:w-1/2 p-6 flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl font-bold text-gradient font-mono mb-2">
