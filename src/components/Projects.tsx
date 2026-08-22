@@ -13,6 +13,7 @@ import frenchSalaryCalculatorImg from "@/assets/Projects/frenchSalaryCalculator.
 import jsonTrad from "@/assets/Projects/jsonTrad.jpg";
 import asuraBlock from "@/assets/Projects/asurablock.jpg";
 import leclercScraper from "@/assets/Projects/leclercScraper.png";
+import vpn from "@/assets/Projects/vpn.svg";
 
 const projects = [
   {
@@ -20,8 +21,17 @@ const projects = [
     description: "PHP SDK to allow simple Prelude (SMS Service) Implementation",
     image: prelude,
     imageAlt: "Playful character representing the PreludeSDK project",
-    link: "https://github.com/Crakenar/PreludeSDK",
+    link: "https://github.com/TeoBerguerre/PreludeSDK",
     tech: ["Laravel", "SDK"],
+    status: "Production Ready",
+  },
+  {
+    title: "VPN Check SDK",
+    description: "Laravel middleware detecting VPN, proxy and Tor traffic via local IP2Proxy lookups — no runtime API calls.",
+    image: vpn,
+    imageAlt: "Shield and lock icon representing the VPN Check SDK",
+    link: "https://github.com/TeoBerguerre/VpnCheckLaravelSdk",
+    tech: ["Laravel", "PHP", "IP2Proxy"],
     status: "Production Ready",
   },
   {

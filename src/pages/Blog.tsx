@@ -2,9 +2,29 @@ import { Link } from "react-router-dom";
 import { Terminal } from "lucide-react";
 import { getAllPosts } from "@/lib/posts";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { useSEO, SITE_URL } from "@/hooks/use-seo";
 
 const Blog = () => {
   const posts = getAllPosts();
+
+  useSEO({
+    title: "Blog",
+    description: "Notes on C++, quant dev, and whatever else I'm learning along the way.",
+    path: "/blog",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      name: "teoislearning blog",
+      url: `${SITE_URL}/blog`,
+      blogPost: posts.map((post) => ({
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        datePublished: post.date,
+        url: `${SITE_URL}/blog/${post.slug}`,
+      })),
+    },
+  });
 
   return (
     <div className="min-h-screen bg-background">

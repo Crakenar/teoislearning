@@ -6,10 +6,35 @@ import rehypeHighlight from "rehype-highlight";
 import { getPostBySlug } from "@/lib/posts";
 import Mermaid from "@/components/Mermaid";
 import NotFound from "./NotFound";
+import { useSEO, SITE_URL } from "@/hooks/use-seo";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+
+  useSEO({
+    title: post?.title ?? "Post not found",
+    description: post?.description ?? "",
+    path: `/blog/${slug ?? ""}`,
+    type: "article",
+    publishedTime: post?.date,
+    tags: post?.tags,
+    jsonLd: post
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date,
+          dateModified: post.date,
+          keywords: post.tags.join(", "),
+          author: { "@type": "Person", name: "Teo Berguerre" },
+          publisher: { "@type": "Person", name: "Teo Berguerre" },
+          mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${post.slug}` },
+          url: `${SITE_URL}/blog/${post.slug}`,
+        }
+      : undefined,
+  });
 
   if (!post) return <NotFound />;
 
