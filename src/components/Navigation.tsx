@@ -1,4 +1,5 @@
 import { Terminal } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
@@ -61,6 +62,12 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <Link
+              to="/blog"
+              className="px-4 py-2 font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Blog
+            </Link>
           </div>
         </div>
       </div>
